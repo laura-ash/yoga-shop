@@ -10,8 +10,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% endblock %}
 
+    {% block extra meta %}
+    {% endblock %}
+
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% endblock %}
+
+    {% block extra_css %}
     {% endblock %}
     
     {% corejs %}
@@ -20,13 +26,26 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {% endjs %}
 
-    <title>Yoga</title>
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Yoga {% block extra_title %}{% endblock %}</title>
   </head>
 
   <body>
-        <header></header>
+        <header class=""></header>
         {% if messages %}
         <div class="message-container"></div>
         {% endif % }
+
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block postloadjs %}
+        {% endblock %}
+
   </body>
 </html>

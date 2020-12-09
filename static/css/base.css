@@ -1,6 +1,6 @@
 
 .hero {
-    background-image: url("{% static '/images/yoga-mat-header.jpg' %}");
+    background-image: url(/media/yoga-mat-header.jpg);
 }
 
 

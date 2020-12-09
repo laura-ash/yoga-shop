@@ -27,3 +27,11 @@ body {
     color: #fff;
     border-color: #fff;
 }
+
+/* Nav bar */
+
+#nav {
+    text-transform: uppercase;
+    color: #363636;
+    font-weight: bold;
+}

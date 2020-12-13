@@ -29,6 +29,12 @@ body {
     border-color: #fff;
 }
 
+.cta-dark {
+    text-transform: uppercase;
+    color: #363636;
+    border-color: #363636;
+}
+
 /* Nav bar */
 
 #nav {

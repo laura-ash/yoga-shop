@@ -157,4 +157,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+FREE_SHIPPING_THRESHOLD = 40
+STANDARD_SHIPPING_PERCENTAGE = 10 

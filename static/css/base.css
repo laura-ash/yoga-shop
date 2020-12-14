@@ -11,6 +11,20 @@ body {
     height: 10rem;
 }
 
+h1 {
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.line {
+    border-bottom: 1px solid #363636;
+    width: 5%;
+}
+
 /* Home page */
 
 .hero {
@@ -41,4 +55,11 @@ body {
     text-transform: uppercase;
     color: #363636;
     font-weight: bold;
+}
+
+/* Product page */
+
+.card {
+    width: 18rem;
+    margin: 1rem;
 }

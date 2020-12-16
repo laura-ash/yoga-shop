@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{ product.name }}</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+            </div>
+            <div class="col-sm-5 center-stack">
+                <p class="prod-detail">€{{ product.price }}</p>
+                <p class="prod-detail">{{ product.description }}</p>
+                <a href="#" class="btn btn-primary prod-detail">Add to bag</a>
+            </div>
+        </div>
+</div>
+    
+
+{% endblock %}

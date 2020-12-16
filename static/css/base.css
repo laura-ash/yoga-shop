@@ -63,3 +63,16 @@ h2 {
     width: 18rem;
     margin: 1rem;
 }
+
+/* product detail page */
+
+.center-stack {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.prod-detail {
+    display: block;
+    width: 100%;
+}

@@ -137,6 +137,12 @@ Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=m
 - [Stripe](https://stripe.com/ie) - to handle financial transactions.
 
 ### Tools
+- [GitPod](https://www.gitpod.io/) - an online IDE for developing this project.
+- [Git](https://git-scm.com/) - for version control.
+- [GitHub](https://git-scm.com/) - for remotely storing project's code.
+- [PIP](https://pip.pypa.io/en/stable/installing/) - for installation of necessary tools.
+- [Heroku](https://heroku.com/) - to host the project.
+
 ### Databases
 
 ## Testing

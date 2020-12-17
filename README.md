@@ -82,6 +82,8 @@ This project is built all around yoga, which is a much loved hobby of mine. The 
 #### Colours
 #### Typography
 #### Icons
+Icons were used throughout the project for ease of use. They help grab attention and also highlight what certain parts of the website do, for example the shopping cart is 
+represented by a cart icon. These icons we added via FontAwesome. 
 
 ### Wireframes
 

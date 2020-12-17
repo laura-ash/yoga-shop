@@ -81,6 +81,10 @@ This project is built all around yoga, which is a much loved hobby of mine. The 
 #### Framework
 #### Colours
 #### Typography
+I wanted the fonts that I chose to create a nice design but also be easily readible. For this reason I chose the following;
+- Montserrat - A sans-serif font that is used for the body and all main text. It was capitalized for headings and CTAs in some cases which looked quite nice.
+- Google Fonts was used to import this font to the project.
+
 #### Icons
 Icons were used throughout the project for ease of use. They help grab attention and also highlight what certain parts of the website do, for example the shopping cart is 
 represented by a cart icon. These icons we added via FontAwesome. 
@@ -98,7 +102,19 @@ represented by a cart icon. These icons we added via FontAwesome.
 ### Data Modelling
 
 #### Profile App
+
 #### Products App
+##### Product
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL
+ Sku | sku | CharField | max_length=254, null=True, blank=True
+ Name | name | CharField | max_length=254 
+ Description | description | TextField 
+ Price | price | DecimalField |max_digits=6, decimal_places=2
+ Image | image| ImageField | null=True, blank=True
+ Image Url | image_url | URLField | max_length=1024, null=True, blank=True
+ 
 #### Events App
 #### Blog App
 
@@ -107,6 +123,12 @@ represented by a cart icon. These icons we added via FontAwesome.
 ## Technologies Used
 
 ### Languages
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+- [JavaScript](https://www.javascript.com/)
+- [Python](https://www.python.org/) 
+- [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) - templating language for Python, to display back-end data in HTML.
+
 ### Libraries and Frameworks
 ### Tools
 ### Databases

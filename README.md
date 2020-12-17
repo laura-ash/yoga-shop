@@ -130,6 +130,12 @@ Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=m
 - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) - templating language for Python, to display back-end data in HTML.
 
 ### Libraries and Frameworks
+- [Django](https://www.djangoproject.com/) - Python framework for building the project.
+- [Bootstrap](https://www.bootstrapcdn.com/) - as the front-end framework for layout and design.
+- [Google Fonts](https://fonts.google.com/) - to import fonts.
+- [FontAwesome](https://fontawesome.com/) - to provide icons used across the project. 
+- [Stripe](https://stripe.com/ie) - to handle financial transactions.
+
 ### Tools
 ### Databases
 

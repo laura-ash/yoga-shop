@@ -64,6 +64,10 @@ h2 {
     margin: 1rem;
 }
 
+.nav-item {
+    list-style: none;
+}
+
 /* product detail page */
 
 .center-stack {

@@ -10,15 +10,15 @@
                 Book
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                <a class="dropdown-item" href="#">Classes</a>
-                <a class="dropdown-item" href="#">Workshops</a>
+                <a class="dropdown-item" href="{% url 'products' %}category=classes">Classes</a>
+                <a class="dropdown-item" href="{% url 'products' %}category=workshops">Workshops</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'products' %}?category=accessories,clothing">All Products</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=accessories">Accessories</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=clothing">Clothing</a>
             </li>

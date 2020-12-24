@@ -91,11 +91,11 @@ a:hover {
 }
 
 .category-btn {
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 1.7px;
     color: #2d2d2d;
-    line-height: 12px;
+    line-height: 0.7rem;
     height: 30px;
     border-radius: 15px;
     padding: 9px 15px;
@@ -115,14 +115,22 @@ a:hover {
 #product-count {
     margin-top: 0.8rem;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 1.7px;
     text-decoration: none;
 }
 
-
-x
+.sort {
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px;
+}
 /* product detail page */
 
 .center-stack {
@@ -134,4 +142,47 @@ x
 .prod-detail {
     display: block;
     width: 100%;
+}
+
+/* Search bar */
+
+
+
+#search{
+    height: 50px;
+    font-size: 1.2em;
+    width: 0;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+    transform: translateX(-30px);
+}
+
+.icon span{
+    transform: rotate(-45deg);
+}
+
+.active{
+    width: 60%;
+}
+
+#search:hover{
+    box-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff;
 }

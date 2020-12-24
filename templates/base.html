@@ -49,10 +49,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+
+                    <div id="search-container" class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                         <form method="GET" action="{% url 'products' %}">
                             <div class="input-group w-100">
-                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                <input id="search" class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                                 <div class="input-group-append">
                                     <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                         <span class="icon">
@@ -63,6 +64,13 @@
                             </div>
                         </form>
                     </div>
+
+                     <input type="text" placeholder="Whatcha looking for?">
+                        <div class="icon">
+                            <span>&#9906;</span>
+                        </div>
+
+                
                     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                             <li class="list-inline-item dropdown">
@@ -119,4 +127,11 @@
         {% endblock %}
 
   </body>
+
+    <script type="text/javascript">
+        document.querySelector(".icon").addEventListener("click", function(){
+        document.querySelector("input").classList.toggle("active");
+    })
+    </script>
+
 </html>

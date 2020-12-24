@@ -15,12 +15,16 @@
     <div class="container">
         <div class="row d-flex justify-content-between">
             <div class="col-xs-6">
-                <h1>Shop</h1>
-                <div class="line"></div>
+                    <p id="product-count">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <a href="{% url 'products' %}">All Products</a> |
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
             </div>
             <div class="col-xs-6">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown sort">
+                    <a class="nav-link dropdown-toggle sort-btn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sort
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,15 +41,7 @@
                 {% endfor %}
             </div>
         </div>
-    
-        <div class="row">
-            <p id="product-count">
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <a href="{% url 'products' %}">All Products</a> |
-                {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-            </p>
-        </div>
+
     
         <div class="row">
         {% for product in products %}

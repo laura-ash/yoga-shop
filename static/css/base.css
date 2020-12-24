@@ -4,7 +4,7 @@ body {
 }
 
 :root {
-    --primary-color: #583d72;
+    --primary-color: #000000;
 }
 
 /* General styles */
@@ -143,3 +143,40 @@ a:hover {
     display: block;
     width: 100%;
 }
+
+/* Search bar */
+
+.search-input {
+    height: 3rem;
+    width: 0;
+    outline: none;
+    padding-left: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 15px;
+    transition: all .2s;
+}
+
+.search-icon {
+    height: 3rem;
+    width: 3rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+    transform: translateX(-30px);
+}
+
+.active {
+    width: fit-content;
+}
+
+.icon-size {
+   width: 1.2rem;
+}
+
+

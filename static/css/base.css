@@ -84,6 +84,30 @@ a {
 .tag-container {
     color: var(--primary-color);
 }
+
+.category-btn {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 12px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 9px 15px;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #eee;
+    margin: 5px;
+}
+
+.category-btn:hover {
+    color: #eee;
+    background-color: #2d2d2d;
+    text-decoration: none;
+}
+
+
 /* product detail page */
 
 .center-stack {

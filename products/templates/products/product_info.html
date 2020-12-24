@@ -25,7 +25,16 @@
                 </a>
             </div>
             <div class="col-sm-5 center-stack">
-                <p class="prod-detail">€{{ product.price }}</p>
+                <div>
+                    <p class="prod-detail">€{{ product.price }}</p>
+                    {% if product.category %}
+                        <p class="tag-container">
+                            <a class="tag" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tags tag-icon"></i>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                    {% endif %}
+                </div>
                 <p class="prod-detail">{{ product.description }}</p>
                 <a href="#" class="btn btn-primary prod-detail">Add to bag</a>
             </div>

@@ -68,6 +68,14 @@ h2 {
     list-style: none;
 }
 
+.tag {
+    font-size: 0.9rem;
+}
+
+.tag-icon {
+    padding-right: 5px;
+}
+
 /* product detail page */
 
 .center-stack {

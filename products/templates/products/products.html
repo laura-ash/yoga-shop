@@ -42,6 +42,13 @@
                     <h2>€{{ product.price }}</h2>
                     
                     <a href="#" class="btn btn-primary">Add to bag</a>
+                    {% if product.category %}
+                        <p>
+                            <a class="tag" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tags tag-icon"></i>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

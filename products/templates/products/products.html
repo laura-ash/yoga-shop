@@ -40,10 +40,9 @@
                 <div class="card-body">
                     <a href="{% url 'product_info' product.id %}"><h2 class="card-title">{{ product.name }}</h2></a>
                     <h2>€{{ product.price }}</h2>
-                    
                     <a href="#" class="btn btn-primary">Add to bag</a>
                     {% if product.category %}
-                        <p>
+                        <p class="tag-container">
                             <a class="tag" href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tags tag-icon"></i>{{ product.category.friendly_name }}
                             </a>

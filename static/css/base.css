@@ -3,7 +3,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
+:root {
+    --primary-color: #583d72;
+}
 
 /* General styles */
 
@@ -13,7 +15,6 @@ body {
 
 h1 {
     text-transform: uppercase;
-
 }
 
 h2 {
@@ -23,6 +24,10 @@ h2 {
 .line {
     border-bottom: 1px solid #363636;
     width: 5%;
+}
+
+a {
+    color: var(---primary-color);
 }
 
 /* Home page */
@@ -76,6 +81,9 @@ h2 {
     padding-right: 5px;
 }
 
+.tag-container {
+    color: var(--primary-color);
+}
 /* product detail page */
 
 .center-stack {

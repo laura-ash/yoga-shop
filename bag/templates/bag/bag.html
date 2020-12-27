@@ -7,28 +7,9 @@
             <div class="col"></div>
         </div>
     </div>
+    
 {% endblock %}
 
 
 {% block content %}
-   <div class="container">
-       <div class="row">
-           <h2>Shopping bag</h2>
-       </div>
-       <div class="row">
-           <div class="col">
-                {% if bag_items %}
-                    <div class="table-responsive rounded"></div>
-                {% else %}
-                    <p>Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-primary cta-dark">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Continue Shopping</span>
-                    </a>
-                {% endif %}
-            </div>
-       </div>
-   </div>
 {% endblock %}

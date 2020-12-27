@@ -39,6 +39,42 @@ a:hover {
     color: #a6a9b6;
 }
 
+
+.heading {
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.cta {
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    height: 30px;
+    border-radius: 15px;
+    padding: 9px 15px;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #eee;
+    margin: 5px;
+}
+
+.cta:hover {
+    color: #eee;
+    background-color: #2d2d2d;
+    text-decoration: none;
+}
+
+
+
 /* Home page */
 
 .hero {
@@ -51,11 +87,11 @@ a:hover {
     padding-left: 5%;
 }
 
-.cta {
+/* .cta {
     text-transform: uppercase;
     color: #fff;
     border-color: #fff;
-}
+}*/
 
 .cta-dark {
     text-transform: uppercase;
@@ -125,16 +161,6 @@ a:hover {
     text-decoration: none;
 }
 
-.sort {
-    font-size: 0.8rem;
-    font-weight: 900;
-    letter-spacing: 1.7px;
-    color: #2d2d2d;
-    line-height: 0.7rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 5px;
-}
 /* product detail page */
 
 .center-stack {

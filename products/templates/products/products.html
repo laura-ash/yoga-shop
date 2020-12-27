@@ -35,7 +35,7 @@
             </div>
             <div class="col-sm-12">
                 {% for c in current_categories %}
-                    <a class="category-btn" href="{% url 'products' %}?category={{ c.name }}">
+                    <a class="cta" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="category-name">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}

@@ -38,31 +38,26 @@
   <body>
         <header class="">
             <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-sm-6">
+                <div class="row d-flex justify-content-between">
                         <a href="{% url 'home' %}">
-                            <img src="{{ MEDIA_URL }}lola-yoga-logo.png" id="logo">
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
+                            <img src="{{ MEDIA_URL }}lola-logo.png" id="logo">
+                        </a>                
                         {% include 'includes/main-nav.html' %}
-                    </div>
                 </div>
-                <div class="row">
 
-
-                        <form class="search-form" method="GET" action="{% url 'products' %}">
-                            <div>
-                                <input class="search-input" type="text" name="q" placeholder="Search our products">
+                <div class="row d-flex justify-content-end">
+                    <div>
+                        <ul>
+                             <li class="list-inline-item"> 
+                             <div>
+                                <form class="search-form" method="GET" action="{% url 'products' %}">
+                                    <input class="search-input" type="text" name="q" placeholder="Search our products">
+                                </form>
+                                <span class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
                             </div>
-                        </form>
-                        <span class="search-icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                   
-
-                    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                            </li>
                             <li class="list-inline-item dropdown">
                                 <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="text-center">
@@ -97,7 +92,10 @@
                                     </div>
                                 </a>
                             </li>
+                           
                         </ul>
+            
+                       
                     </div>
                 </div>
 

@@ -4,10 +4,14 @@ body {
 }
 
 :root {
-    --primary-color: #000000;
+    --primary-color: #DFAE89;
 }
 
 /* General styles */
+
+.absolute {
+    position: absolute;
+}
 
 #logo {
     height: 10rem;
@@ -180,3 +184,4 @@ a:hover {
 }
 
 
+c

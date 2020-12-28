@@ -17,6 +17,10 @@ body {
     height: 10rem;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 h1 {
     text-transform: uppercase;
 }
@@ -73,7 +77,27 @@ a:hover {
     text-decoration: none;
 }
 
+.small-cta {
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    height: 30px;
+    border-radius: 15px;
+    padding: 9px 15px;
+    border: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #eee;
+    margin: 5px;
+}
 
+.small-cta:hover {
+    color: #eee !important;
+    background-color: #2d2d2d;
+    text-decoration: none;
+}
 
 /* Home page */
 

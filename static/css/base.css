@@ -17,9 +17,10 @@ body {
     height: 10rem;
 }
 
-.cursor {
+.update-quantity {
     cursor: pointer;
 }
+
 
 h1 {
     text-transform: uppercase;

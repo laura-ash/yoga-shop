@@ -1,6 +1,4 @@
-Bugs: 
-Problem: When trying to link images in the website, they were not displaying as expected.
-Solution: Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
+
 
 Yoga Time
 
@@ -32,6 +30,7 @@ This project is built all around yoga, which is a much loved hobby of mine. The 
     - [**Databases**](#databases)
 
 5. [**Testing**](#testing)
+    - [**Bugs**](#bugs)
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
     - [**Heroku Deployment**](#heroku-deployment)
@@ -145,6 +144,14 @@ Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=m
 ### Databases
 
 ## Testing
+### Bugs
+
+Problem: When trying to link images in the website, they were not displaying as expected.
+Solution: Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
+
+Problem: When linking to the checkout page via the secure checkout button in the shopping bag, an error appeared saying that the template was not found.
+Solution: After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
+checkout > templates > checkout.html. It needed to be changed to checkout > templates > checkout > checkout.html. 
 
 ## Deployment
 

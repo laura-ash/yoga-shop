@@ -29,12 +29,12 @@
                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset>
-                        <legend>Details</legend>
+                        <legend class="heading">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset>
-                        <legend>Delivery</legend>
+                        <legend class="heading">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
@@ -55,7 +55,7 @@
 						</div>
                     </fieldset>
                     <fieldset class="px-3">
-                        <legend>Payment</legend>
+                        <legend class="heading">Payment</legend>
                         <!-- Insert Stripe here -->
                         <div class="mb-3" id="card-element"></div>
 
@@ -64,19 +64,19 @@
                     </fieldset>
 
                     <div>                    
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+						<a href="{% url 'view_bag' %}" class="cta">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="cta">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
-						<p class="small text-danger my-0">
+						<p class="alert alert-primary">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>

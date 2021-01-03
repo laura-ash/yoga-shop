@@ -153,6 +153,10 @@ Problem: When linking to the checkout page via the secure checkout button in the
 Solution: After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
 checkout > templates > checkout.html. It needed to be changed to checkout > templates > checkout > checkout.html. 
 
+Problem: When integrating Stripe there was an issue with the checkout template. When trying to access it, the error message appeared "AuthenticationError at /checkout/. 
+You did not provide an API key."
+Solution: In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
+
 ## Deployment
 
 ## Credits

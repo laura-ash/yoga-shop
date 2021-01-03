@@ -28,6 +28,11 @@ def checkout(request):
     print(intent)
 
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'The Stripe public key is missing. \
+            Check if it is set correctly in your environment!')
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,

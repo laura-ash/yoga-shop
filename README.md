@@ -157,6 +157,8 @@ Problem: When integrating Stripe there was an issue with the checkout template. 
 You did not provide an API key."
 Solution: In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
 
+Problem: When setting up Stripe webhooks, it kept returning a 400 error. 
+Solution: The server needed to be ended and restarted after exporting the Stripe signing secret. 
 ## Deployment
 
 ## Credits

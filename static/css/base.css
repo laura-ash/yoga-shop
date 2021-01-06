@@ -21,6 +21,10 @@ body {
     cursor: pointer;
 }
 
+.spacer{
+    height: 1.5rem;
+}
+
 
 h1 {
     text-transform: uppercase;
@@ -262,4 +266,11 @@ a:hover {
 
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
+}
+
+/* Profile */
+
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
 }

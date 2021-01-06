@@ -20,6 +20,65 @@
             <hr>
         </div>
     </div>
-</div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="spacer"></div>
+            <hr>
+            <h3 class="heading">Default Delivery Information</h3>
+            <hr>
+            <form action="{% url 'profile' %}" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="cta">Update Details</button>
+            </form>
+            <div class="spacer"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h3 class="heading">Previous Orders</h3>
+            <hr>
+            <div class="order-history table-responsive">
+                <table class="table table-sm table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="heading">Order Number</th>
+                            <th class="heading">Date</th>
+                            <th class="heading">Items</th>
+                            <th class="heading">Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">
+                                        {{ order.order_number|truncatechars:6 }}
+                                    </a>
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {% if item.product.has_sizes %}
+                                                    Size {{ item.product.size|upper }}
+                                                {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>${{ order.grand_total }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

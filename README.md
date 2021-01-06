@@ -159,6 +159,11 @@ Solution: In the checkout/views.py there was some code missing. The following ne
 
 Problem: When setting up Stripe webhooks, it kept returning a 400 error. 
 Solution: The server needed to be ended and restarted after exporting the Stripe signing secret. 
+
+Problem: The following error appeared in the terminal window during development "module 'profiles.views' has no attribute 'order_history'". This meant the server could not start.
+Solution: After some investigating it turned out the indentation in profiles/views.py was not done correctly. There was an extra indent which led to the function not 
+being recognized and this error appearing. 
+
 ## Deployment
 
 ## Credits

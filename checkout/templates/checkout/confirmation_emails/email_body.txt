@@ -1,0 +1,25 @@
+Hello {{ order.full_name }},
+
+Thank you for ordering from Yoga Lola! This is just a confirmation of your order. Please find details of your order below;
+
+Order Date: {{ order.date }}
+
+Order Number: {{ order.order_number }}
+
+Order Total: ${{ order.order_total }}
+{% if order.delivery_cost %}
+Delivery: ${{ order.delivery_cost }}
+{% else %}
+Delivery: Free
+{% endif %}
+Grand Total: ${{ order.grand_total }}
+
+Once prepared, we will deliver your order to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+
+If you have any questions, please feel free to drop us a line at {{ contact_email }}.
+
+Have a great day ahead. 
+
+All the best, 
+The Lola Yoga Team

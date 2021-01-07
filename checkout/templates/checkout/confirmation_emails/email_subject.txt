@@ -1,0 +1,1 @@
+Order Confirmation for Lola Yoga - Order No. {{ order.order_number }}

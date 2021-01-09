@@ -18,11 +18,12 @@
             <h2 class="heading">Lola Yoga Blog</h2>
             <hr>
         </div>
+    </div>
 
-        <div class="col-12 posts">
+        <div class="row posts d-flex justify-content-between">
             {% for post in posts %}
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+            <div class="card">
+                <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="heading"><a href="#">{{ post.title }}</a></h2>
                     <p class="card-text">{{ post.date }}</p>

@@ -21,7 +21,7 @@ body {
     cursor: pointer;
 }
 
-.spacer{
+.spacer {
     height: 1.5rem;
 }
 
@@ -51,6 +51,17 @@ a:hover {
 
 .heading {
     font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.heading-lrg {
+    font-size: 1.2rem;
     font-weight: 900;
     letter-spacing: 1.7px;
     color: #2d2d2d;
@@ -273,4 +284,14 @@ a:hover {
 .order-history {
     max-height: 416px;
     overflow-y: auto;
+}
+
+/* Blog post */
+
+.post-img {
+    max-width: 100%;
+}
+
+.post-text {
+    margin: auto;
 }

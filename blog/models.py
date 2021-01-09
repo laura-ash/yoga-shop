@@ -8,4 +8,6 @@ class Post(models.Model):
     body = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
-
+    # Return title of post
+    def __str__(self):
+        return self.title

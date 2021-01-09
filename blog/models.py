@@ -11,3 +11,6 @@ class Post(models.Model):
     # Return title of post
     def __str__(self):
         return self.title
+
+    def intro(self):
+        return self.body[:60] + '...'

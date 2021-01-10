@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}s
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="heading">Lola Yoga Events</h2>
+            <hr>
+        </div>
+    </div>
+
+    {% for event in events %}
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+            <img src="{{ event.image.url }}" class="card-img card-event" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title heading-lrg">{{ event.name }}</h5>
+                    <h5 class="card-title heading">{{ event.date }}</h5>
+                    <h5 class="card-title heading">{{ event.location }}</h5>
+                    <h5 class="card-title heading">Led by: {{ event.facilitator }}</h5>
+                    <p class="card-text">{{ event.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+        
+    </div>
+
+
+    
+
+
+
+</div>
+{% endblock %}

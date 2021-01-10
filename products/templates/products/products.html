@@ -45,7 +45,7 @@
     
         <div class="row">
         {% for product in products %}
-            <div class="card">
+            <div class="card card-small">
                 <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                 <div class="card-body">
                     <a href="{% url 'product_info' product.id %}"><h2 class="card-title">{{ product.name }}</h2></a>

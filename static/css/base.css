@@ -149,7 +149,7 @@ a:hover {
 
 /* Product page */
 
-.card {
+.card-small {
     width: 18rem;
     margin: 1rem;
 }
@@ -294,4 +294,16 @@ a:hover {
 
 .post-text {
     margin: auto;
+}
+
+/* Events */
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.card-event { 
+    width: 100%;
+    height: 220px;
 }

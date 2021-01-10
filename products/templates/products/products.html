@@ -43,14 +43,14 @@
         </div>
 
     
-        <div class="row">
+        <div class="row d-flex justify-content-between">
         {% for product in products %}
             <div class="card card-small">
-                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                <div class="card-body">
-                    <a href="{% url 'product_info' product.id %}"><h2 class="card-title">{{ product.name }}</h2></a>
-                    <h2>€{{ product.price }}</h2>
-                    <a href="#" class="btn btn-primary">Add to bag</a>
+                <img class="card-img-top card-product" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <div class="card-body d-flex flex-column align-content-around">
+                    <a href="{% url 'product_info' product.id %}"><h2 class="card-title heading">{{ product.name }}</h2></a>
+                    <h2 class="heading">€{{ product.price }}</h2>
+                    
                     {% if product.category %}
                         <p class="tag-container">
                             <a class="tag" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -58,6 +58,8 @@
                             </a>
                         </p>
                     {% endif %}
+        
+                    <a href="{% url 'product_info' product.id %}" class="cta text-center">View More</a>
                 </div>
             </div>
         {% endfor %}

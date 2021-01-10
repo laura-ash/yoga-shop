@@ -4,15 +4,7 @@
         <span class="navbar-toggler-icon"></span>
     </a>
     <div class="collapse navbar-collapse flex-container" id="navbarNav">
-        <ul class="navbar-nav navbar-center">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Book
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Classes</a>
-                <a class="dropdown-item" href="#">Workshops</a>
-            </li>
+        <ul class="navbar-nav navbar-center heading">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
@@ -26,7 +18,7 @@
                 <a class="nav-link mobile-hide" href="{% url 'blog_home' %}">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mobile-hide" href="#">Gallery</a>
+                <a class="nav-link mobile-hide" href="{% url 'events' %}">Events</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact-us">Contact Us</a>

@@ -14,14 +14,20 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>{{ product.name }}</h1>
-                <div class="line"></div>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                <hr>
+                <h2 class="heading">{{ product.name }}</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="heading">Keep Shopping</span>
+                        <span class="heading padding-left">Keep Shopping</span>
                 </a>
+                <div class="spacer"></div>
             </div>
         </div>
         <div class="row">

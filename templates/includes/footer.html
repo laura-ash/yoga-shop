@@ -1,0 +1,54 @@
+<footer>
+  <div class="container pt-5 border-bottom">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 mb-3 text-center">
+        <img src="{{ MEDIA_URL }}lola-logo.png" id="logo">
+      </div>
+      <div class="col-md-9 col-sm-12  footer-links">
+
+            <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
+                <h5 class="heading">Products</h5>
+                <ul class="list-group">    
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'products' %}?category=accessories,clothing">All Products</a></li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'products' %}?category=accessories">Accessories</a></li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'products' %}?category=clothing">Clothing</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
+            <h5 class="heading">Studio</h5>
+                <ul class="list-group">
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'event_space' %}">Our Space</a></li>
+                <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'events' %}">Events</a></li>  
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+            <h5 class="heading">Blog</h5>
+            <div class="spacer"></div>
+            <h5 class="heading">Contact Us</h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+            <h5 class="heading">Company Info</h5>
+            <p><i class="fas fa-map-marker icon-footer"></i>29 St Kevins Park, Dartry, Dublin 6</p>
+            <p><i class="fas fa-phone icon-footer"></i>01 4961906</p>
+            </div>
+        
+
+      </div>
+        
+        <div class="col-md-12">
+            <div class="footer-social-links">
+                <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="py-4 d-flex justify-content-center align-items-center">
+                <p>&copy; 2021 Lola Yoga</p>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+</footer>

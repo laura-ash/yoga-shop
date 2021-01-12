@@ -110,11 +110,16 @@
         <div class="message-container"></div>
         {% endif %}
 
+
         {% block page_header %}
         {% endblock %}
 
         {% block content %}
         {% endblock %}
+    
+        <div class="col-12">
+            {% include 'includes/footer.html' %}
+        </div>
 
         {% block postloadjs %}
         {% endblock %}

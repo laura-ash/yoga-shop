@@ -169,6 +169,9 @@ being recognized and this error appearing.
 ## Credits
 
 ### Acknowledgements     
+
+Inspiration for the social media icons for the footer taken from Sazzad on codepen, found here - https://codepen.io/sazzad/pen/WbdzzQ/
+
 ---
 
 ## Disclaimer

@@ -11,13 +11,30 @@
 
 
 {% block content %}
-    <div class="jumbotron hero d-flex flex-column">
-        <h1 class="title">Our Space</h1>
-        <p>We are lucky to have such a beautiful event space for us to hold!</p>
-        <p></p>
-        <p>Remember there is free shipping on all orders of ${{ free_shipping_threshold}}!</p>
-        <p>
-            <a class="btn btn-outline-primary cta" href="#" role="button">Learn more</a>
-        </p>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="heading">Our Space</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+            <img src="/media/yoga-studio.jpg" alt="Yoga studio">
+            </div>
+            <div class="col-4 margin-auto">
+                <h1 class="heading">Our Studio</h1>
+                <p>We are lucky to have such a beautiful event space for us to hold!</p>
+                <p>Stop by any time to visit, we are located in the leafy area of Dartry, Dublin.</p>
+                <p>We always have different classes and events on, if you'd like more information click the below link!</p>
+                <div class="spacer"></div>
+                <p class="cta text-center">upcoming events</p>
+            </div>
+        </div>
+    </div>    
+    
+
+
+   
 {% endblock %}

@@ -304,7 +304,7 @@ a:hover {
     max-width: 100%;
 }
 
-.post-text {
+.post-text, .margin-auto {
     margin: auto;
 }
 

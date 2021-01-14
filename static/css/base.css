@@ -134,20 +134,24 @@ a:hover {
     background-position: center;
     background-size: cover;
     color: #fff;
-    min-height: 60vh;
+    min-height: 50vh;
     padding-left: 5%;
 }
 
-/* .cta {
-    text-transform: uppercase;
+.white {
     color: #fff;
-    border-color: #fff;
-}*/
+}
 
 .cta-dark {
     text-transform: uppercase;
     color: #363636;
     border-color: #363636;
+}
+
+.home-section {
+    min-height: 50vh;
+    padding-left: 5%;
+    background-color: grey;
 }
 
 /* Nav bar */

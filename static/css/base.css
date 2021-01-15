@@ -126,6 +126,19 @@ a:hover {
     text-decoration: none;
 }
 
+.spacer-lrg {
+    height: 2rem;
+}
+
+.dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
 /* Home page */
 
 .hero {
@@ -325,6 +338,10 @@ a:hover {
 }
 
 /* Footer */
+
+#footer {
+    border-top: solid 1px #212529;
+}
 
 .icon-footer {
     padding-right: 5px;

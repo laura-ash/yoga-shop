@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="heading">Form Submissions</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    {% if request.user.is_superuser %}
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col" class="heading">Date</th>
+                <th scope="col" class="heading">Name</th>
+                <th scope="col" class="heading">Email Address</th>
+                <th scope="col" class="heading">Message</th>
+                </tr>
+            </thead>
+            {% for submissions in submissions %}
+            <tbody>
+                <tr>
+                <td>{{ submissions.date }}</td>
+                <td>{{ submissions.full_name }}</td>
+                <td>{{ submissions.email }}</td>
+                <td>@{{ submissions.message }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <div class="spacer-lrg"></div>
+    {% else %}
+        <div>
+            <p>Please return the the main site at the below link!</p>
+            <div class="spacer"></div>
+            <a href="{% url 'home' %}"  class="cta">Return Home</a>
+            <div class="spacer-lrg"></div>
+        </div>
+    {% endif %}
+
+
+
+    
+        
+        
+    </div>
+
+
+    
+
+
+
+</div>
+{% endblock %}

@@ -7,7 +7,6 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            #save submission to db`
             form.save()
             return redirect('events')
     else:
@@ -21,4 +20,9 @@ def contact(request):
         }
 
     return render(request, 'contact/contact_us.html', context)
+
+def submissions(request):
+    submissions = Contact.objects.all().order_by('date')
+    return render(request, 'contact/submissions.html', {'submissions': submissions})
+
 

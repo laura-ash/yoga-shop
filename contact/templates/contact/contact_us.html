@@ -19,11 +19,12 @@
     <div class="container">
         <div class="row"> 
             <div class="col">
-                <form action="#" method="POST">
+                <form action="{% url 'contact' %}" method="POST">
                 {% csrf_token %}
                 {{ contact_form|crispy }}
                 <button class="cta">Update Details</button>
             </form>
+            <div class="spacer-lrg"></div>
             </div>
         </div>
     </div>

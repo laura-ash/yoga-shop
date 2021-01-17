@@ -41,28 +41,28 @@
             <div class="container">
                 <div class="row d-flex justify-content-between">
                         <a href="{% url 'home' %}">
-                            <img src="{{ MEDIA_URL }}lola-logo.png" id="logo">
+                            <img id="logo" src="{{ MEDIA_URL }}logo.svg" id="logo">
                         </a>                
                         {% include 'includes/main-nav.html' %}
                 </div>
 
                 <div class="row d-flex justify-content-end">
-                    <div>
+                    <div> 
                         <ul>
-                             <li class="list-inline-item"> 
-                             <div>
-                                <form class="search-form inline" method="GET" action="{% url 'products' %}">
-                                    <input class="search-input inline" type="text" name="q" placeholder="    Search our products">
-                                </form>
-                                <span class="search-icon inline">
-                                    <i class="fas fa-search inline"></i>
-                                </span>
-                            </div>
+                            <li class="list-inline-item"> 
+                                <div>
+                                    <form class="search-form inline" method="GET" action="{% url 'products' %}">
+                                        <input class="search-input inline" type="text" name="q" placeholder="Search our products">
+                                    </form>
+                                    <span class="search-icon inline">
+                                        <i class="fas fa-search inline"></i>
+                                    </span>
+                                </div>
                             </li>
                             <li class="list-inline-item dropdown">
                                 <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="text-center">
-                                        <div><i class="fas fa-user fa-lg"></i></div>
+                                        <div><i class="fas fa-user fa-lg icon"></i></div>
                                         <p class="heading margin-top">My Account</p>
                                     </div>
                                 </a>
@@ -82,7 +82,7 @@
                             <li class="list-inline-item">
                                 <a href="{% url 'view_bag' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                        <div><i class="fas fa-shopping-bag fa-lg  icon"></i></div>
                                         <p class="heading margin-top">
                                             {% if grand_total %}
                                                 ${{ grand_total|floatformat:2 }}

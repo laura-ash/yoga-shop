@@ -8,14 +8,11 @@
 {% block content %}
 
 <div class="container-fluid">
+    <div id="banner" class="d-flex justify-content-center">
+        <h3 class="alert">Free Delivery on orders over €{{ free_shipping_threshold}}!</h3>
+    </div>
+
     <div class="jumbotron hero d-flex flex-column justify-content-center">
-        <h1 class="heading-lrg white">Introducing Yoga with Laura</h1>
-        <p>Yoga has always been a passion of mine, and I'm excited to share my journey (so far)!</p>
-        <p>Here you will find information on yoga that I have learned and also you will be able to buy some of my favourite yoga products.</p>
-        <p>Remember there is free shipping on all orders of ${{ free_shipping_threshold}}!</p>
-        <p>
-            <a class="btn btn-outline-primary cta" href="#" role="button">Learn more</a>
-        </p>
     </div>
     
 

@@ -1,10 +1,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
 }
 
 :root {
-    --primary-color: #DFAE89;
+    --primary-color: #a79976;
 }
 
 /* General styles */
@@ -15,10 +16,6 @@ body {
 
 .inline {
     display: inline;
-}
-
-#logo {
-    height: 10rem;
 }
 
 .update-quantity {
@@ -61,7 +58,7 @@ a:hover {
 }
 
 .heading {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 900;
     letter-spacing: 1.7px;
     color: #2d2d2d;
@@ -140,15 +137,44 @@ a:hover {
 }
 
 /* Home page */
+#logo {
+    width: 6rem;
+    margin-top: 1.5rem;
+}
+
+#banner {
+    height: fit-content;
+    background-color: #a79976;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.alert {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    color: #2d2d2d;
+    line-height: 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
+    padding: 5px;
+    color: #000000;
+}
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/yoga-mat-header.jpg);
+    background-image: url(/media/header.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     color: #fff;
     min-height: 50vh;
     padding-left: 5%;
+}
+
+.icon {
+    color:var(--primary-color);
 }
 
 .white {
@@ -173,6 +199,7 @@ a:hover {
     text-transform: uppercase;
     color: #363636;
     font-weight: bold;
+    margin-top: 1.5rem;
 }
 
 /* Product page */
@@ -345,6 +372,7 @@ a:hover {
 
 .icon-footer {
     padding-right: 5px;
+    color: var(--primary-color);
 }
 
 .footer-social-links{
@@ -359,7 +387,7 @@ a:hover {
     margin: 0 5px;
     text-align: center;
     display: inline-block;
-    color: #111;
+    color: var(--primary-color);
 }
 .footer-social-links a i,
 .footer-social-links a span{
@@ -375,7 +403,7 @@ a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    border: 1px solid #111;
+    border: 1px solid var(--primary-color);
     
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;

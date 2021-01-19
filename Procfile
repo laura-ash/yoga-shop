@@ -1,1 +1,1 @@
-web: guincorn yoga:wsgi:application
+web: guincorn yoga-shop:wsgi:application

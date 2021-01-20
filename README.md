@@ -105,7 +105,7 @@ represented by a cart icon. These icons we added via FontAwesome.
 ##### Product
 | **Name** | **Database Key** | **Field Type** | **Validation** |
 --- | --- | --- | --- 
-Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL
+ Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL
  Sku | sku | CharField | max_length=254, null=True, blank=True
  Name | name | CharField | max_length=254 
  Description | description | TextField 
@@ -114,8 +114,33 @@ Category | category | ForeignKey 'Category' | null=True, blank=True, on_delete=m
  Image Url | image_url | URLField | max_length=1024, null=True, blank=True
  
 #### Events App
-#### Blog App
+##### Events
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+ Name | name | CharField | max_length=120, null=True, blank=True
+ Slug | slug | SlugField | null=True, blank=True
+ Date | date | DateTimeField | null=True, blank=True
+ Facilitator | facilitator | CharField | max_length=140, null=True, blank=True
+ Description | description | TextField | null=True, blank=True
+ Level | level | CharField | max_length=80, null=True, blank=True
+ Image | image | ImageField | null=True, blank=True
+ Location | location | CharField | max_length=120, null=True, blank=True
 
+#### Blog App
+##### Blog
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+ Title | title | CharField | max_length=120, null=True, blank=True
+ Slug | slug | SlugField | null=True, blank=True 
+ Date | date | DateTimeField | auto_now_add=True, null=True, blank=True
+ Author | author | CharField | max_length=140, null=True, blank=True
+ Body | body | TextField | null=True, blank=True
+ Image| image | ImageField | null=True, blank=True
+
+ #### Contact App
+ ##### Contacts
+ Full Name | full_name | CharField | max_length=50, null=False, blank=False
+ Email | email | EmailField | max_length=254, null=False, blank=False
+ Message | message | TextField | null=False, blank=False
+ Date | date | DateTimeField | auto_now_add=True
 
 
 ## Technologies Used
@@ -169,6 +194,7 @@ being recognized and this error appearing.
 ## Credits
 
 ### Acknowledgements     
+
 
 Inspiration for the social media icons for the footer taken from Sazzad on codepen, found here - https://codepen.io/sazzad/pen/WbdzzQ/
 

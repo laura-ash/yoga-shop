@@ -76,8 +76,11 @@ This project is built all around yoga, which is a much loved hobby of mine. The 
 
 
 ### Design
-#### Framework
 #### Colours
+- I decided to use the colour #a79976 as the primary colour in the website. This provides a nice warm gold blast of colour for the logo and some different 
+icons throughout the site too. 
+- As a secondary colour, I went with some light greys which matched warm gold quite nicely. The main one used is #2d2d2d which is mostly applied to 
+fonts throughout the website. 
 #### Typography
 I wanted the fonts that I chose to create a nice design but also be easily readible. For this reason I chose the following;
 - Montserrat - A sans-serif font that is used for the body and all main text. It was capitalized for headings and CTAs in some cases which looked quite nice.
@@ -88,19 +91,28 @@ Icons were used throughout the project for ease of use. They help grab attention
 represented by a cart icon. These icons we added via FontAwesome. 
 
 ### Wireframes
+Please see this link for the wireframes. 
 
 ## Features
 ### Existing Features   
-### Features to Implement in the Future
+- Users can buy products on the website
+- Users can find out about events on the website
+- Users can learn more about yoga through the blog
+- Users can find out information about the studio and space
+- Users can contact the site owners through the contact form 
 
+### Features to Implement in the Future
+- Going forward I would love to offer the ability to actually book events through the form 
+- It would also be great to add a blog comments section
 
 ---
 ## Information Architecture
 ### Database choice
+
+While I was in the development phase, I worked with the sqlite3 database which is installed alongside  Django.
+Once deployed, a PostgreSQL database is provided by Heroku as an add-on which was used. 
+
 ### Data Modelling
-
-#### Profile App
-
 #### Products App
 ##### Product
 | **Name** | **Database Key** | **Field Type** | **Validation** |

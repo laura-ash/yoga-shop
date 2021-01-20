@@ -169,6 +169,9 @@ represented by a cart icon. These icons we added via FontAwesome.
 ### Databases
 
 ## Testing
+
+In order to test this project, I approached the website as a consumer. I also got some family and friends to click through to website to see that everything functioned as expected.
+We tested processing orders, reading articles, reaching out through a contact form and all of the other functionality that the app offers.
 ### Bugs
 
 Problem: When trying to link images in the website, they were not displaying as expected.
@@ -195,6 +198,8 @@ being recognized and this error appearing.
 
 ### Acknowledgements     
 
+The code for this project was developed by following the Code Institute video lessons provided for the Boutique Ado Django Mini-Project. However, this was customized and built on 
+in order to fit the requirements for this Yoga project. 
 
 Inspiration for the social media icons for the footer taken from Sazzad on codepen, found here - https://codepen.io/sazzad/pen/WbdzzQ/
 

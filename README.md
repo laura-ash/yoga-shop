@@ -60,17 +60,17 @@ This project is built all around yoga, which is a much loved hobby of mine. The 
 
 
 #### User Stories    
-- Expect to be able to access the website across all screensizes, from mobile to desktop
-- Expect to be able to navigate the website with ease so I can find what I am looking for with minimal effort
-- Expect to be able to read information about the business 
-- Expect to be able to learn more about yoga 
-- Expect to be able to see information on events, such as location, cost, date and time
-- Expect to be able to get in touch with the business in case of any further queries
-- Expect to be able to make a purchase when I want to buy something
-- Expect to get confirmation of that purchase 
-- Expect to be able to view and edit my shopping cart  before purchasing
-- Expect to be able to view a picture and description of items before purchasing
-- Expect my card details to be safe and secure when I purchase 
+- As a user, I would expect to be able to access the website across all screensizes, from mobile to desktop
+- As a user, I would expect be able to navigate the website with ease so I can find what I am looking for with minimal effort
+- As a user, I would expect to be able to read information about the business 
+- As a user, I would expect be able to learn more about yoga 
+- As a user, I would expect be able to see information on events, such as location, cost, date and time
+- As a user, I would expect to able to get in touch with the business in case of any further queries
+- As a user, I would expect to be able to make a purchase when I want to buy something
+- As a user, I would expect to get confirmation of that purchase 
+- As a user, I would expect to be able to view and edit my shopping cart  before purchasing
+- As a user, I would expect to be able to view a picture and description of items before purchasing
+- As a user, I would expect my card details to be safe and secure when I purchase 
 
 
 

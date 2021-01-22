@@ -136,6 +136,57 @@ plan for the website content layout.
 - Users can find out information about the studio and space
 - Users can contact the site owners through the contact form 
 
+#### Global features
+##### Navigation menu 
+- The navigation menu provides an easy way to navigate the site. The following structure can be seen in the navigation menu ;
+Products > All Products, Accessories, Clothing
+Blog 
+Events
+Studio
+Contact Us 
+
+- The navbar changes to a burger icon on smaller devices, to serve responsive design. The same options as above can be seen when this burger icon is clicked. 
+- Bootstrap was used to create this responsive navigation menu. 
+
+##### Footer 
+- The footer is also seen across all the website pages. It provides another navigation menu which users can click to bring them to the main site pages. On top of this, it also 
+provides information on the company address and links to their social page. Please note that these social links were added for demonstration purposes only, and as the website was 
+built for educational purposes they do not lead to live social icons. Should this website be used for a real business though, these links can simply be added to the design once the 
+social pages were created. 
+
+#### Main Pages 
+
+##### Products 
+- The products page serves the function of showcasing any products that a user wants to potentially purchase. There are some options in the navigation which allow you to focus on different 
+product areas too - these would currently be Accessories and Clothing. At the moment, these are the main product categories the yoga shop is selling. This could be builded on with 
+more categories if they were added or another business was using this website. 
+- If you click on the filter options, you have the ability to switch within the actual page between Accessories and Clothing. 
+- There is also an option to sort in the top right of the page, which allows users to put the products in order of price or category. 
+- Each product also is tagged with it's product category, which we can see denoted by a FontAwesome icon in the description box of each product. 
+- There is also the option to "View More" on each product, which brings the user to that individual product detail page. 
+- On that product detail page, the user has the ability to read the full product description. 
+- If they decide to purchase the product, they can select "Add to Bag" and specify the quantity also they would like to add to. 
+
+##### Shopping cart
+- The user has the option to click shopping bag in the top right of the website too. 
+- This will store any items they have added to their cart.
+- Here they can also increase or reduce the quantity of the product in the bag, or remove the product completely from the bag if they wish. 
+- They can also see the monetary value of their shopping cart from this screen, or if they look at the shopping bag icon on the top of each page. 
+- The user can also see how much their shipping is from this screen, and how much more money they need to spend to qualify for free shipping 
+(if they haven't already). 
+
+##### Blog 
+- The blog page shows all of the different blogs that the site owner has published. 
+- It shows the date of each article published, and an intro into the article content. 
+- These blog posts are ordered by the most recently publish being first. 
+- Users can click into them and read more for any articles they are interested in. 
+
+##### Events 
+- The events page shows all of the upcoming events in the studio.
+- These are also ordered by the ones closest to todays date. 
+- Information on the date, facilitator and level of yoga recommended are included on each event card.
+
+
 ### Features to Implement in the Future
 - Going forward I would love to offer the ability to actually book events through the form 
 - It would also be great to add a blog comments section

@@ -186,6 +186,17 @@ more categories if they were added or another business was using this website.
 - These are also ordered by the ones closest to todays date. 
 - Information on the date, facilitator and level of yoga recommended are included on each event card.
 
+##### Studio 
+- The studio page provides information on the yoga space itself. 
+- It serves as an informational page. 
+
+##### Contact Us
+- The contact us page allows for site visitors to get in touch with the site owners.
+- Once the form is submitted, the user details are recorded included their name, email and message.
+- If you are an authenticated superuser, there is also the possibility to go to the form submissions page and check the recent form submissions.
+- This provides a place that the site owners can see who has reached out to them and allows them to get in touch with them accordingly. 
+
+
 
 ### Features to Implement in the Future
 - Going forward I would love to offer the ability to actually book events through the form 

@@ -80,6 +80,19 @@ build out the functionality in this website which is discussed below. It was a r
 
 
 ### Design
+
+#### General Design Decisions
+- The idea behind the overall design of the website was to keep it sleek and modern looking. I decided to go for a minimalist style, which was achieved through using a lot 
+of white space and more modern design decisions. This can be seen throughout the website, particularly on the homepage where I was trying to avoid overcrowding too. I wanted 
+to prioritize ease of use throughout the whole website design.
+- The three gold dots under the headings on the homepage are another example of this minimalist design strategy. They were quite a sleek addition to the homepage, and provided 
+a subtle bit of colour to the white space while also maintaining the more modern website design.
+- The footer was also designed with the above in mind. Again, there is white space behind the footer instead of a block of colour. This was also implemented to be inline with 
+the minimalist strategy, and a simple border top was added to show where the footer started. 
+- The above specified design continues onto all of the other pages, including the blog, events, products and shopping bag sections. The more system type pages such as the email 
+verification and forgotten password page again echo the same simple but effective design. This was to ensure that all of the page presentations and designs were fully aligned 
+in any design decisions.
+
 #### Colours
 - I decided to use the colour #a79976 as the primary colour in the website. This provides a nice warm gold blast of colour for the logo and some different 
 icons throughout the site too. 

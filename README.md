@@ -154,7 +154,7 @@ provides information on the company address and links to their social page. Plea
 built for educational purposes they do not lead to live social icons. Should this website be used for a real business though, these links can simply be added to the design once the 
 social pages were created. 
 
-#### Main Pages 
+#### Main Pages and their Features
 
 ##### Products 
 - The products page serves the function of showcasing any products that a user wants to potentially purchase. There are some options in the navigation which allow you to focus on different 
@@ -199,8 +199,8 @@ more categories if they were added or another business was using this website.
 
 
 ### Features to Implement in the Future
-- Going forward I would love to offer the ability to actually book events through the form 
-- It would also be great to add a blog comments section
+- Going forward I would love to offer the ability to actually book events through the form.
+- It would also be great to add a blog comments section.
 
 ---
 ## Information Architecture
@@ -225,6 +225,7 @@ Once deployed, a PostgreSQL database is provided by Heroku as an add-on which wa
 #### Events App
 ##### Events
 | **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
  Name | name | CharField | max_length=120, null=True, blank=True
  Slug | slug | SlugField | null=True, blank=True
  Date | date | DateTimeField | null=True, blank=True
@@ -237,6 +238,7 @@ Once deployed, a PostgreSQL database is provided by Heroku as an add-on which wa
 #### Blog App
 ##### Blog
 | **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
  Title | title | CharField | max_length=120, null=True, blank=True
  Slug | slug | SlugField | null=True, blank=True 
  Date | date | DateTimeField | auto_now_add=True, null=True, blank=True
@@ -246,6 +248,8 @@ Once deployed, a PostgreSQL database is provided by Heroku as an add-on which wa
 
  #### Contact App
  ##### Contacts
+ | **Name** | **Database Key** | **Field Type** | **Validation** |
+ --- | --- | --- | --- 
  Full Name | full_name | CharField | max_length=50, null=False, blank=False
  Email | email | EmailField | max_length=254, null=False, blank=False
  Message | message | TextField | null=False, blank=False

@@ -287,22 +287,22 @@ In order to test this project, I approached the website as a consumer. I also go
 We tested processing orders, reading articles, reaching out through a contact form and all of the other functionality that the app offers.
 ### Bugs
 
-Problem: When trying to link images in the website, they were not displaying as expected.
-Solution: Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
+- *Problem*: When trying to link images in the website, they were not displaying as expected.
+- *Solution*: Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
 
-Problem: When linking to the checkout page via the secure checkout button in the shopping bag, an error appeared saying that the template was not found.
-Solution: After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
+- *Problem*: When linking to the checkout page via the secure checkout button in the shopping bag, an error appeared saying that the template was not found.
+- *Solution*: After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
 checkout > templates > checkout.html. It needed to be changed to checkout > templates > checkout > checkout.html. 
 
-Problem: When integrating Stripe there was an issue with the checkout template. When trying to access it, the error message appeared "AuthenticationError at /checkout/. 
+- *Problem*: When integrating Stripe there was an issue with the checkout template. When trying to access it, the error message appeared "AuthenticationError at /checkout/. 
 You did not provide an API key."
-Solution: In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
+- *Solution*: In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
 
-Problem: When setting up Stripe webhooks, it kept returning a 400 error. 
-Solution: The server needed to be ended and restarted after exporting the Stripe signing secret. 
+- *Problem*: When setting up Stripe webhooks, it kept returning a 400 error. 
+- *Solution*: The server needed to be ended and restarted after exporting the Stripe signing secret. 
 
-Problem: The following error appeared in the terminal window during development "module 'profiles.views' has no attribute 'order_history'". This meant the server could not start.
-Solution: After some investigating it turned out the indentation in profiles/views.py was not done correctly. There was an extra indent which led to the function not 
+- *Problem*: The following error appeared in the terminal window during development "module 'profiles.views' has no attribute 'order_history'". This meant the server could not start.
+- *Solution*: After some investigating it turned out the indentation in profiles/views.py was not done correctly. There was an extra indent which led to the function not 
 being recognized and this error appearing. 
 
 ## Deployment

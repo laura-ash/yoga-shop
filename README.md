@@ -111,9 +111,13 @@ it is so clear and easy to read which really kept in line with the modern design
 website. It is also extremely easy to read which means it's a nicer experience for the customer. 
 - I decided to keep this font consistent across the website, and use different styling such as capitalization, colour and letter spacing for different kinds of text such as headings 
 and CTAs. 
+
 #### Icons
-Icons were used throughout the project for ease of use. They help grab attention and also highlight what certain parts of the website do, for example the shopping cart is 
-represented by a cart icon. These icons we added via FontAwesome. 
+
+Icons were used throughout the project for ease of use and to ensure customers could navigate through the website with minimal effort. They help grab attention and also highlight 
+what certain parts of the website do, for example the shopping cart is represented by a cart icon. These icons we added via [FontAwesome](https://fontawesome.com/), which is a 
+great online library that you can embed in your project and then pull in specific icons. They can be easily styled too which made it great in this case, as I could target them with 
+CSS and change their colour and size quite easily. 
 
 ### Wireframes
 Please see [this link](https://github.com/laura-ash/yoga-shop/tree/master/wireframes) for the wireframes. They were built with Mockflow, which is a online tool to develop wireframes. More information can be found [at this 

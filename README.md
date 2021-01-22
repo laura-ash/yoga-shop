@@ -4,7 +4,9 @@ Yoga Time
 
 Please find the live website at this link: 
 
-This project is built all around yoga, which is a much loved hobby of mine. The website will share information on yoga through a blog, and also sell some yoga products.
+This project is built all around yoga, which is a much loved hobby of mine. The website will share information on yoga through a blog, and also sell some yoga products. This has been 
+a really exciting project for me to do. It was my first time experimenting with Django, which proved to be a really powerful framework with lots of options. Using Django I managed to 
+build out the functionality in this website which is discussed below. It was a really cool tool to work with and I really enjoyed this project, I hope you do too!
 
 ---
 

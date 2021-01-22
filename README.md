@@ -105,10 +105,12 @@ gold as I thought the site looked nicer with it and there was a better contrast 
 fonts throughout the website. 
 
 #### Typography
-I wanted the fonts that I chose to create a nice design but also be easily readible. For this reason I chose the following;
-- Montserrat - A sans-serif font that is used for the body and all main text. It was capitalized for headings and CTAs in some cases which looked quite nice.
-- Google Fonts was used to import this font to the project.
-
+[Google Fonts](https://fonts.google.com/) was used to import custom fonts to the project. I wanted the fonts that I chose to create a nice design but also be easily readible. For this reason I chose the following across the website;
+- [Montserrat](https://fonts.google.com/specimen/Montserrat) - This is a sans-serif font that is used for the body and all main text. I chose  this font for a number of reasons. Firstly, 
+it is so clear and easy to read which really kept in line with the modern design. Sans-serif fonts would have a much more modern feel to them, which is why it was perfect in this 
+website. It is also extremely easy to read which means it's a nicer experience for the customer. 
+- I decided to keep this font consistent across the website, and use different styling such as capitalization, colour and letter spacing for different kinds of text such as headings 
+and CTAs. 
 #### Icons
 Icons were used throughout the project for ease of use. They help grab attention and also highlight what certain parts of the website do, for example the shopping cart is 
 represented by a cart icon. These icons we added via FontAwesome. 

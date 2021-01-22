@@ -83,8 +83,14 @@ build out the functionality in this website which is discussed below. It was a r
 #### Colours
 - I decided to use the colour #a79976 as the primary colour in the website. This provides a nice warm gold blast of colour for the logo and some different 
 icons throughout the site too. 
+- This was set as the primary colour through CSS variables which means if this ever needs to be changed, it can be done so quickly throughout the site. This 
+was a really handy feature, which was great during design. It meant that I could test out different shades of the colour idea I had in mind, and it was just 
+one simple change across the website that would handle this. I originally had a more yellow toned colour, but ultimately decided to go with this nice warm 
+gold as I thought the site looked nicer with it and there was a better contrast between that and the white space. [More on CSS variables here] 
+(https://www.w3schools.com/css/css3_variables.asp), for those looking to learn more about it. 
 - As a secondary colour, I went with some light greys which matched warm gold quite nicely. The main one used is #2d2d2d which is mostly applied to 
 fonts throughout the website. 
+
 #### Typography
 I wanted the fonts that I chose to create a nice design but also be easily readible. For this reason I chose the following;
 - Montserrat - A sans-serif font that is used for the body and all main text. It was capitalized for headings and CTAs in some cases which looked quite nice.

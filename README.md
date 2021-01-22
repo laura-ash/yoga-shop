@@ -91,7 +91,7 @@ Icons were used throughout the project for ease of use. They help grab attention
 represented by a cart icon. These icons we added via FontAwesome. 
 
 ### Wireframes
-Please see [this link](https://github.com/laura-ash/yoga-shop/master/wireframes) for the wireframes. They were built with WireframePro, which is a online tool to develop wireframes. More information can be found [at this 
+Please see [this link](https://github.com/laura-ash/yoga-shop/tree/master/wireframes) for the wireframes. They were built with Mockflow, which is a online tool to develop wireframes. More information can be found [at this 
 link here.](https://www.mockflow.com/
 )  
 The wireframes contain tablet, mobile and desktop versions. As these were created at the start of the project, there are some 

@@ -57,8 +57,10 @@ build out the functionality in this website which is discussed below. It was a r
 #### Business goals(site owner's goals):
 - Make a profit from any purchases on the stories
 - Share knowledge of yoga with others
-- Create a yoga community where people can share experiences
+- Create a safe space to learn about yoga
 - Promote yoga in Ireland and increase awareness of it's benefits
+- Encourage people to try yoga and improve their health
+- Promote their yoga products
 
 
 #### User Stories    

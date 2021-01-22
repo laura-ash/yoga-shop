@@ -1,8 +1,8 @@
 
 
-Yoga Time
+# Yoga Time
 
-Please find the live website at this link: 
+## Please find the live website [at this link here.](https://yoga-shop.herokuapp.com/)
 
 This project is built all around yoga, which is a much loved hobby of mine. The website will share information on yoga through a blog, and also sell some yoga products. This has been 
 a really exciting project for me to do. It was my first time experimenting with Django, which proved to be a really powerful framework with lots of options. Using Django I managed to 

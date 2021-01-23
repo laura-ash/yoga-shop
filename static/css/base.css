@@ -170,10 +170,10 @@ a:hover {
 }
 
 .hero {
-    background-image: url(/media/header.png);
+    background-image: url(/media/banner-img.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     color: #fff;
     min-height: 50vh;
     padding-left: 5%;
@@ -483,14 +483,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 680px) {
-    body {
-        padding: 1rem;
+    #header-section {
+        padding: 0 2rem;
     }
 }
 
-@media only screen and (min-width: 575px) {
-    body {
-        padding: 1rem;
-    }
-}
+
 

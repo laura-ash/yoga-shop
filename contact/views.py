@@ -13,13 +13,13 @@ def contact(request):
 
         contact_form = ContactForm()
 
-        template = 'contact/contact_us.html'
+        template = 'contact/contact-us.html'
         context = {
             'contact_form': contact_form,
 
         }
 
-    return render(request, 'contact/contact_us.html', context)
+    return render(request, 'contact/contact-us.html', context)
 
 def submissions(request):
     submissions = Contact.objects.all().order_by('date')

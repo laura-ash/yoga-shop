@@ -95,7 +95,7 @@ a:hover {
 
 .cta:hover {
     color: #eee;
-    background-color: #2d2d2d;
+    background-color: var(--primary-color);
     text-decoration: none;
 }
 

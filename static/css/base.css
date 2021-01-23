@@ -364,6 +364,10 @@ a:hover {
     margin: auto;
 }
 
+ #blog-cards {
+    justify-content: space-between;
+ }
+
 /* Events */
 
 .card-horizontal {
@@ -468,7 +472,7 @@ a:hover {
 
 
 @media only screen and (max-width: 768px) {
-  #product-cards {
+  #product-cards, #blog-cards {
       justify-content: center;
   }
 

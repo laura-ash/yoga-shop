@@ -20,7 +20,7 @@
         </div>
     </div>
 
-        <div class="row posts d-flex justify-content-between">
+        <div id="blog-cards" class="row posts d-flex">
             {% for post in posts %}
             <div class="card card-small">
                 <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">

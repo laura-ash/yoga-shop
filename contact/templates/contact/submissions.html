@@ -28,19 +28,56 @@
                 <th scope="col" class="heading">Name</th>
                 <th scope="col" class="heading">Email Address</th>
                 <th scope="col" class="heading">Message</th>
+                <th scope="col" class="heading">Action</th>
                 </tr>
             </thead>
-            {% for submissions in submissions %}
+            {% for submission in submissions %}
             <tbody>
                 <tr>
-                <td>{{ submissions.date }}</td>
-                <td>{{ submissions.full_name }}</td>
-                <td>{{ submissions.email }}</td>
-                <td>@{{ submissions.message }}</td>
+                <td>{{ submission.date }}</td>
+                <td>{{ submission.full_name }}</td>
+                <td>{{ submission.email }}</td>
+                <td>{{ submission.message }}</td>
+                <!--<td><a href="{% url 'update_submission' submission.id %}">Update</a></td>-->
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{ submission.id }}">Edit</button></td> 
                 </tr>
             </tbody>
+            <!-- Modal -->
+            <div class="modal fade" id="modal-{{ submission.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit form submission details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"> 
+                        <form action="{% url 'update_submission' submission.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="full_name" value="{{ submission.full_name }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="email" class="form-control" name="email" value="{{ submission.email }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="message" value="{{ submission.message }}">
+                            </div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Update Submission</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </table>
+
+
+
+
+
         <div class="spacer-lrg"></div>
     {% else %}
         <div>

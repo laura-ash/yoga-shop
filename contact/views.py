@@ -8,7 +8,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('events')
+            return redirect('contact')
     else:
 
         contact_form = ContactForm()

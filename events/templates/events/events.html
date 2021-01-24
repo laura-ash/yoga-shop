@@ -33,9 +33,50 @@
                     <h5 class="card-title heading">{{ event.location }}</h5>
                     <h5 class="card-title heading">Led by: {{ event.facilitator }}</h5>
                     <p class="card-text">{{ event.description }}</p>
+                    {% if request.user.is_superuser %}
+                    <button type="button" class="cta" data-toggle="modal" data-target="#edit-modal-{{ event.id }}">Edit</button>
+                    <button type="button" class="cta" data-toggle="modal" data-target="#delete-modal-{{ event.id }}">Delete</button>
+                    {% endif %}
                 </div>
             </div>
         </div>
+
+         <!-- Modal -->
+            <div class="modal fade" id="edit-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title heading" id="exampleModalLabel">Edit event details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"> 
+                        <form action="{% url 'update_event' event.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="full_name" value="{{ event.name }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="date" value="{{ event.date }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="location" value="{{ event.location }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="facilitator" value="{{ event.facilitator }}">
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" name="description" value="{{ event.description }}">
+                            </div>
+                            <button type="button" class="cta" data-dismiss="modal">Close</button>
+                            <button type="submit" class="cta">Update Event</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
     {% endfor %}
         <div class="spacer-lrg"></div>

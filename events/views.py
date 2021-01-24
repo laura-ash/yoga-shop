@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import EventForm
 from .models import Event
 
 def events(request):
@@ -7,3 +8,11 @@ def events(request):
 
 def event_space(request):
     return render(request, 'events/event-space.html')
+
+def update_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            form.save()
+    return redirect(events)

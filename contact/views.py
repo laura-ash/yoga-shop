@@ -36,3 +36,10 @@ def update_submission(request, pk):
         if form.is_valid():
             form.save()
     return redirect(submissions)
+
+def delete_submission(request, pk):
+    submission = get_object_or_404(Contact, pk=pk)
+    if request.method == "POST":
+        submission.delete()
+
+    return redirect(submissions)

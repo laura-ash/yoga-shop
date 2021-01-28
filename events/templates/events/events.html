@@ -20,6 +20,13 @@
         </div>
     </div>
 
+    <div>
+        {% if request.user.is_superuser %}
+        <a href="{% url 'create_event' %}" class="cta">Create New Event</a>
+        {% endif %}
+    </div>
+    <div class="spacer-lrg"></div>
+
     {% for event in events %}
     <div class="card mb-3">
         <div class="row no-gutters">
@@ -40,6 +47,7 @@
                 </div>
             </div>
         </div>
+
 
          <!-- Modal -->
             <div class="modal fade" id="edit-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

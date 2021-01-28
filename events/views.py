@@ -14,6 +14,11 @@ def event_space(request):
 
 
 def create_event(request):
+    event_form = EventForm()
+    context = {
+            'event_form': event_form,
+        }
+
     if request.method == 'POST':
         event_form = EventForm(request.POST)
 
@@ -24,11 +29,12 @@ def create_event(request):
         if event_form.is_valid():
             event_form.save()
             return redirect('events')
-    else:
-
-        event_form = EventForm()
+        else:
+        
+            event_form = EventForm()
 
         template = 'events/create-event.html'
+        
         context = {
             'event_form': event_form,
         }
@@ -42,6 +48,9 @@ def update_event(request, pk):
         event_form = EventForm(request.POST, instance=event)
         if event_form.is_valid():
             event_form.save()
+        else:
+            print('form not valid')
+            print(event_form)
     return redirect(events)
 
 

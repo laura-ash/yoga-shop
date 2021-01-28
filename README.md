@@ -67,6 +67,7 @@ build out the functionality in this website which is discussed below. It was a r
 - As a user, I would expect to be able to access the website across all screensizes, from mobile to desktop
 - As a user, I would expect be able to navigate the website with ease so I can find what I am looking for with minimal effort
 - As a user, I would expect to be able to read information about the business 
+- As a user, I would expect to be able to search the products  for what I am looking for 
 - As a user, I would expect be able to learn more about yoga 
 - As a user, I would expect be able to see information on events, such as location, cost, date and time
 - As a user, I would expect to able to get in touch with the business in case of any further queries
@@ -283,8 +284,64 @@ Once deployed, a PostgreSQL database is provided by Heroku as an add-on which wa
 
 ## Testing
 
-In order to test this project, I approached the website as a consumer. I also got some family and friends to click through to website to see that everything functioned as expected.
-We tested processing orders, reading articles, reaching out through a contact form and all of the other functionality that the app offers.
+### Manual Testing
+The first step in the testing journey was manual testing, where I went through each feature on a range of screen sizes, browsers and devices. The aim here was to ensure that 
+everything on the frontend was working for users and provided a responsive and easily navigable design. I also checked these across each of the user stories to be sure 
+these were each addressed. Overall, I approached the website as a consumer. I also got some family and friends to click through to website to see that everything functioned as expected.
+We tested processing orders, reading articles, reaching out through a contact form and all of the other functionality that the app offers. See details of this manual testing 
+and the user stories each step corresponds to below.
+
+#### Responsiveness: 
+##### User stories: 
+- As a user, I would expect to be able to access the website across all screen sizes, from mobile to desktop
+
+##### Steps: 
+- I went through each page of the website using the Google Chrome Dev tools. This allowed me to use the multi screen testing option, and I could view the website from a range of different screen sizes.
+
+#### Navigation:
+##### User stories:
+- As a user, I would expect be able to navigate the website with ease so I can find what I am looking for with minimal effort
+##### Steps: 
+- To test this, I clicked into every link in the nav bar to be sure they were all connected properly. Within the pages, I ensured that all of the CTAs, buttons, and links were connected properly too. 
+
+#### Content: 
+##### User stories:
+- As a user, I would expect to be able to read information about the business 
+- As a user, I would expect be able to learn more about yoga 
+- As a user, I would expect be able to see information on events, such as location, cost, date and time
+
+##### Steps: 
+These stories were mainly addressed with the blog and events features.
+To test this, I went through each of the blog posts and events to make sure everything was working as expected. 
+
+#### Contact: 
+##### User stories:
+- As a user, I would expect to able to get in touch with the business in case of any further queries
+
+##### Steps: 
+To test this, I submitted the contact form to be sure that my submission was registering. 
+
+#### Functions:
+##### User stories:
+- As a user, I would expect to be able to make a purchase when I want to buy something
+- As a user, I would expect to get confirmation of that purchase 
+- As a user, I would expect to be able to view and edit my shopping cart  before purchasing
+- As a user, I would expect to be able to view a picture and description of items before purchasing
+- As a user, I would expect my card details to be safe and secure when I purchase 
+
+##### Steps: 
+- These stories would refer to the purchasing option from the products page.
+- In order to test this, I attempted to purchase different items from the products page.
+- I checked that the amount was increasing and decreasing as products were added to the bag, and similar with the product quantities being updated.
+- When we got to the payment screen, I then used the Stripe demo cards to test purchase going through. 
+
+#### Search: 
+##### User stories:
+- As a user, I would expect to be able to search the products  for what I am looking for 
+
+##### Steps: 
+- In order to test this, I conducted different searches using the search bar. I then checked against the search keywords and the search results that everything was behaving as expected.
+
 ### Bugs
 
 #### Broken images on website

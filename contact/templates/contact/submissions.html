@@ -38,7 +38,6 @@
                 <td>{{ submission.full_name }}</td>
                 <td>{{ submission.email }}</td>
                 <td>{{ submission.message }}</td>
-                <!--<td><a href="{% url 'update_submission' submission.id %}">Update</a></td>-->
                 <td><button type="button" class="cta" data-toggle="modal" data-target="#edit-modal-{{ submission.id }}">Edit</button></td>
                 <td><button type="button" class="cta" data-toggle="modal" data-target="#delete-modal-{{ submission.id }}">Delete</button></td> 
                 </tr>

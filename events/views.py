@@ -39,7 +39,13 @@ def create_event(request):
 def update_event(request, pk):
     event = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
-        form = EventForm(request.POST, instance=event)
-        if form.is_valid():
-            form.save()
+        event_form = EventForm(request.POST, instance=event)
+        if event_form.is_valid():
+            event_form.save()
+    return redirect(events)
+
+def delete_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        event.delete()
     return redirect(events)

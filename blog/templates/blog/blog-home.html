@@ -23,7 +23,7 @@
         <div id="blog-cards" class="row posts d-flex">
             {% for post in posts %}
             <div class="card card-small">
-                <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ post.image.url }}" alt="Image for post {{ post.title }}>
                 <div class="card-body">
                     <h2 class="heading"><a href="{% url 'detail' slug=post.slug %}">{{ post.title }}</a></h2>
                     <p class="card-text">{{ post.date }}</p>

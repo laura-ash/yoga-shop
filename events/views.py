@@ -10,7 +10,7 @@ def events(request):
 
 
 def event_space(request):
-   return render(request, 'events/event-space.html')
+    return render(request, 'events/event-space.html')
 
 
 def create_event(request):
@@ -25,7 +25,7 @@ def create_event(request):
             event_form.save()
             return redirect('events')
     else:
-        
+
         event_form = EventForm()
 
         template = 'events/create-event.html'
@@ -43,6 +43,7 @@ def update_event(request, pk):
         if event_form.is_valid():
             event_form.save()
     return redirect(events)
+
 
 def delete_event(request, pk):
     event = get_object_or_404(Event, pk=pk)

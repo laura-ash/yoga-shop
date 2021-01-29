@@ -368,6 +368,42 @@ You did not provide an API key."
 being recognized and this error appearing. 
 
 ## Deployment
+### Local Deployment
+
+To run this project locally, you must install the following tools;
+- IDE - you can use whichever you like. I used [GitPod](https://www.gitpod.io/) when creating this project. 
+- [Git](https://git-scm.com/)
+- [PIP](https://pip.pypa.io/en/stable/installing/)
+- [Python3](https://www.python.org/download/releases/3.0/)
+
+On top of this, you will need to create accounts with these services. You can sign up for all of these online at the attached links;
+- [Stripe](https://stripe.com/en-ie) to handle the payments
+- [Gmail](https://mail.google.com/) to set up the emails from, such as to verify a new user email
+
+Instructions
+- Clone this repo into your chosen code editor. You can do this via the terminal window or by downloading it from GitHub. There is a great article on the GitHub Help page which goes further into this process. 
+- You must now add your environment variables. You can follow these steps;
+-- Create a .env file in the root directory.
+-- Add the .env file to the .gitignore file in your project's root directory. This means your environment variables will not be in version control. This is an important step for security purposes. 
+-- Within the .env file set your  environment variables as follows; 
+```
+import os  
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret key>"    
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"   
+```
+
+- Now you must add these requirements from the requirements.txt file, by typing the following command in the terminal;
+`pip3 install -r requirements.txt`
+- Next step is to create the database. Migrate the models to connect the database by typing the following commands In the terminal: 
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
+- Create a superuser within the account so you can access the admin panel. Put the following command in the terminal and follow the prompts; then and insert username,email and password):
+`python3 manage.py createsuperuser`
+- You should now be able to run the application by typing the following command in the terminal:
+`python3 manage.py runserver`
 
 ## Credits
 

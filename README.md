@@ -344,29 +344,29 @@ Steps:
 
 ### Bugs
 
-1. Broken images on website
+#### 1. Broken images on website
 **Problem:** When trying to link images in the website, they were not displaying as expected.
 
 **Solution:** Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
 
-2. Template could not be found 
+#### 2. Template could not be found 
 **Problem:** When linking to the checkout page via the secure checkout button in the shopping bag, an error appeared saying that the template was not found.
 
 **Solution:** After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
 checkout > templates > checkout.html. It needed to be changed to checkout > templates > checkout > checkout.html. 
 
-3. Authentication error with Stripe
+#### 3. Authentication error with Stripe
 **Problem:** When integrating Stripe there was an issue with the checkout template. When trying to access it, the error message appeared "AuthenticationError at /checkout/. 
 You did not provide an API key."
 
 **Solution:** In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
 
-4. 404 error with Stripe webhooks
+#### 4. 404 error with Stripe webhooks
 **Problem:** When setting up Stripe webhooks, it kept returning a 400 error. 
 
 **Solution:** The server needed to be ended and restarted after exporting the Stripe signing secret. 
 
-5. Missing attribute for order template
+#### 5. Missing attribute for order template
 **Problem:** The following error appeared in the terminal window during development "module 'profiles.views' has no attribute 'order_history'". This meant the server could not start.
 
 **Solution:** After some investigating it turned out the indentation in profiles/views.py was not done correctly. There was an extra indent which led to the function not 

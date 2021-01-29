@@ -32,6 +32,7 @@ build out the functionality in this website which is discussed below. It was a r
     - [**Databases**](#databases)
 
 5. [**Testing**](#testing)
+    - [** Manual Testing **](#manual-testing)
     - [**Bugs**](#bugs)
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)

@@ -411,7 +411,7 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH_Secret key>"
 - You should now be able to run the application by typing the following command in the terminal:
 `python3 manage.py runserver`
 
-### Deplyoment to Heroku 
+### Heroku Deployment 
 
 In order to deploy to Heroku, I had first had the project locally deployed. I took the following steps;
 - Created a requirements.txt file, by adding the following command to the terminal; `pip3 freeze > requirements.txt`. This was to tell Heroku what dependencies needed to be installed to successfully deploy. 

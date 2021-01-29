@@ -20,7 +20,7 @@ def create_event(request):
         }
 
     if request.method == 'POST':
-        event_form = EventForm(request.POST)
+        event_form = EventForm(request.POST, request.FILES)
 
         context = {
             'event_form': event_form,
@@ -45,7 +45,7 @@ def create_event(request):
 def update_event(request, pk):
     event = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
-        event_form = EventForm(request.POST, instance=event)
+        event_form = EventForm(request.POST, request.FILES, instance=event)
         if event_form.is_valid():
             event_form.save()
         else:

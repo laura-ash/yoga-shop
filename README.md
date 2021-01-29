@@ -292,78 +292,83 @@ We tested processing orders, reading articles, reaching out through a contact fo
 and the user stories each step corresponds to below.
 
 #### Responsiveness: 
-##### User stories: 
+User stories: 
 - As a user, I would expect to be able to access the website across all screen sizes, from mobile to desktop
 
-##### Steps: 
+Steps: 
 - I went through each page of the website using the Google Chrome Dev tools. This allowed me to use the multi screen testing option, and I could view the website from a range of different screen sizes.
 
 #### Navigation:
-##### User stories:
+User stories:
 - As a user, I would expect be able to navigate the website with ease so I can find what I am looking for with minimal effort
-##### Steps: 
+Steps: 
 - To test this, I clicked into every link in the nav bar to be sure they were all connected properly. Within the pages, I ensured that all of the CTAs, buttons, and links were connected properly too. 
 
 #### Content: 
-##### User stories:
+User stories:
 - As a user, I would expect to be able to read information about the business 
 - As a user, I would expect be able to learn more about yoga 
 - As a user, I would expect be able to see information on events, such as location, cost, date and time
 
-##### Steps: 
+Steps: 
 These stories were mainly addressed with the blog and events features.
 To test this, I went through each of the blog posts and events to make sure everything was working as expected. 
 
 #### Contact: 
-##### User stories:
+User stories:
 - As a user, I would expect to able to get in touch with the business in case of any further queries
 
-##### Steps: 
+Steps: 
 To test this, I submitted the contact form to be sure that my submission was registering. 
 
 #### Functions:
-##### User stories:
+User stories:
 - As a user, I would expect to be able to make a purchase when I want to buy something
 - As a user, I would expect to get confirmation of that purchase 
 - As a user, I would expect to be able to view and edit my shopping cart  before purchasing
 - As a user, I would expect to be able to view a picture and description of items before purchasing
 - As a user, I would expect my card details to be safe and secure when I purchase 
 
-##### Steps: 
+Steps: 
 - These stories would refer to the purchasing option from the products page.
 - In order to test this, I attempted to purchase different items from the products page.
 - I checked that the amount was increasing and decreasing as products were added to the bag, and similar with the product quantities being updated.
 - When we got to the payment screen, I then used the Stripe demo cards to test purchase going through. 
 
 #### Search: 
-##### User stories:
+User stories:
 - As a user, I would expect to be able to search the products  for what I am looking for 
 
-##### Steps: 
+Steps: 
 - In order to test this, I conducted different searches using the search bar. I then checked against the search keywords and the search results that everything was behaving as expected.
 
 ### Bugs
 
 #### Broken images on website
 **Problem:** When trying to link images in the website, they were not displaying as expected.
+
 **Solution:** Needed to add "django.template.context_processors.media" under OPTIONS in TEMPLATES in the settings.py file.
 
 #### Template could not be found 
 **Problem:** When linking to the checkout page via the secure checkout button in the shopping bag, an error appeared saying that the template was not found.
+
 **Solution:** After some investigating, I realized the problem was with the folder structure. The checkout.html template was under the following structure; 
 checkout > templates > checkout.html. It needed to be changed to checkout > templates > checkout > checkout.html. 
 
 #### Authentication error with Stripe
 **Problem:** When integrating Stripe there was an issue with the checkout template. When trying to access it, the error message appeared "AuthenticationError at /checkout/. 
 You did not provide an API key."
+
 **Solution:** In the checkout/views.py there was some code missing. The following needed to be added "'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,"
 
 #### 404 error with Stripe webhooks
 **Problem:** When setting up Stripe webhooks, it kept returning a 400 error. 
+
 **Solution:** The server needed to be ended and restarted after exporting the Stripe signing secret. 
 
 #### Missing attribute for order template
 **Problem:** The following error appeared in the terminal window during development "module 'profiles.views' has no attribute 'order_history'". This meant the server could not start.
+
 **Solution:** After some investigating it turned out the indentation in profiles/views.py was not done correctly. There was an extra indent which led to the function not 
 being recognized and this error appearing. 
 

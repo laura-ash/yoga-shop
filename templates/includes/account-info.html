@@ -1,0 +1,43 @@
+<div class="row d-flex justify-content-end">
+                    <div> 
+                        <ul>
+                            <li class="list-inline-item dropdown">
+                                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-user fa-lg icon"></i></div>
+                                        <p class="heading margin-top">My Account</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                    {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <a href="{% url 'submissions' %}" class="dropdown-item heading">Form Submissions</a>
+                                        {% endif %}
+                                        <a href="{% url 'profile' %}" class="dropdown-item heading">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item heading">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item heading">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item heading">Login</a>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="{% url 'view_bag' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-shopping-bag fa-lg  icon"></i></div>
+                                        <p class="heading margin-top">
+                                            {% if grand_total %}
+                                                ${{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                                $0.00
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                           
+                        </ul>
+            
+                       
+                    </div>
+                </div>

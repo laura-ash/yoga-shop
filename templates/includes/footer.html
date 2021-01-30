@@ -8,7 +8,7 @@
       <div class="col-md-9 col-sm-12  footer-links">
 
             <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
-                <h5 class="heading">Products</h5>
+                <a class="heading" href="{% url 'products' %}?category=accessories,clothing">Products</a>
                 <ul class="list-group">    
                     <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'products' %}?category=accessories,clothing">All Products</a></li>
                     <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'products' %}?category=accessories">Accessories</a></li>
@@ -17,7 +17,7 @@
             </div>
 
             <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
-            <h5 class="heading">Studio</h5>
+            <a class="heading" href="{% url 'event_space' %}">Studio</a>
                 <ul class="list-group">
                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'event_space' %}">Our Space</a></li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a href="{% url 'events' %}">Events</a></li>  
@@ -25,9 +25,9 @@
             </div>
 
             <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
-            <h5 class="heading">Blog</h5>
+            <a class="heading" href="{% url 'blog_home' %}">Blog</a>
             <div class="spacer"></div>
-            <h5 class="heading">Contact Us</h5>
+            <a class="heading" href="{% url 'contact' %}">Contact Us</a>
             </div>
 
             <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">

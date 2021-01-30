@@ -47,12 +47,17 @@
 								<label for="id-save-info">Save this delivery information to my profile</label>
                                 <input type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
-								<label class="form-check-label" for="id-save-info">
-                                    <a href="{% url 'account_signup' %}">Create an account here</a> or 
-                                    <a href="{% url 'account_login' %}">login</a> to save this information
-                                </label>
+                                <p class="alert alert-primary">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </span>
+                                    <span>While you can checkout as a guest, your order history will not be saved. Please 
+                                    <a href="{% url 'account_signup' %}"><u>Create an account here</u></a> or 
+                                    <a href="{% url 'account_login' %}"><u>login</u></a> to save this information</span>
+                                </p>
 							{% endif %}
-						</div>
+                        </div>
+                        <div class="spacer-lrg"></div>
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="heading">Payment</legend>
@@ -63,7 +68,13 @@
                         <div id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-
+                    <p class="alert alert-danger">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                    <div class="spacer"></div>
                     <div>                    
 						<a href="{% url 'view_bag' %}" class="cta">
 							<span class="icon">
@@ -72,17 +83,13 @@
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
 						<button id="submit-button" class="cta">
-							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="alert alert-primary">
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-						</p>
+                            </span>
+                            <span class="font-weight-bold">Complete Order</span>
+                        </button>
+                        <div class="spacer-lrg"></div>
+						
 					</div>
                 </form>
             </div>

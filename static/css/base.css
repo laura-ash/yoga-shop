@@ -149,6 +149,11 @@ a:hover {
     margin-top: 1.5rem;
 }
 
+.card-home {
+    width: 25rem;
+    margin: 0.8rem;
+}
+
 #banner {
     height: fit-content;
     background-color: #a79976;
@@ -227,7 +232,7 @@ a:hover {
 }
 
 .card-small {
-    width: 25rem;
+    width: 18rem;
     margin: 0.8rem;
 }
 

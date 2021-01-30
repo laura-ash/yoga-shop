@@ -30,7 +30,7 @@
                         <table class="table table-sm table-borderless">
                             <thead class="heading">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col">Product</th>
                                     <th scope="col"></th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Price</th>
@@ -92,17 +92,17 @@
                                 </tr>
                             {% endfor %}
                                 <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <p><span class="heading">Bag Total:</span>€{{ total|floatformat:2 }}</p>
-                                    <p><span class="heading">Delivery:</span>€{{ shipping|floatformat:2 }}</p>
-                                    <p><span class="heading">Grand Total:</span> €{{ grand_total|floatformat:2 }}</p>
-                                    {% if free_shipping_delta > 0 %}
-                                        <p>
-                                            Spend €{{ free_shipping_delta }}  more for free delivery!
-                                        </p>
-                                    {% endif %}
-                                </td>
-                            </tr>
+                                    <td colspan="5" class="pt-5 text-right">
+                                        <p><span class="heading">Bag Total:</span>€{{ total|floatformat:2 }}</p>
+                                        <p><span class="heading">Delivery:</span>€{{ shipping|floatformat:2 }}</p>
+                                        <p><span class="heading">Grand Total:</span> €{{ grand_total|floatformat:2 }}</p>
+                                        {% if free_shipping_delta > 0 %}
+                                            <p>
+                                                Spend €{{ free_shipping_delta }}  more for free delivery!
+                                            </p>
+                                        {% endif %}
+                                    </td>
+                                </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
                                     <a href="{% url 'products' %}" class="cta">

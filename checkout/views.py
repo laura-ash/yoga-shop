@@ -12,6 +12,7 @@ from profiles.models import UserProfile
 
 import stripe
 import json
+import sweetify
 
 @require_POST
 def cache_checkout_data(request):
@@ -88,6 +89,7 @@ def checkout(request):
         else:
             messages.error(request, 'Oops! There was an issue with your form submission. \
                 Please recheck all of your information.')
+            sweetify.success(request, 'Unsuccessful', position='top-right', toast='true', icon='error', timer= '3000',)
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -146,6 +148,8 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+    else: 
+        sweetify.success(request, 'Order unsuccessful', position='top-right', toast='true', icon='error', timer= '3000',)
 
     # Save the user's info
     if save_info:
@@ -161,6 +165,8 @@ def checkout_success(request, order_number):
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
             user_profile_form.save()
+        else:
+            sweetify.success(request, 'Form submission unsuccessful', position='top-right', toast='true', icon='error', timer= '3000',)
 
     
     messages.success(request, f'Order successfully processed! \
@@ -175,4 +181,5 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
+    sweetify.success(request, 'Your order was successful!', position='top-right', toast='true', icon='success', timer= '3000',)
     return render(request, template, context)

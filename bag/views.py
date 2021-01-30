@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+import sweetify
 
 # Create your views here.
 
@@ -32,6 +33,7 @@ def add_to_bag(request, item_id):
             bag[item_id] = quantity
 
     request.session['bag'] = bag
+    sweetify.success(request, 'Product added to bag', position='top-right', toast='true', icon='success', timer= '3000',)
     return redirect(redirect_url)
 
 def adjust_bag(request, item_id):
@@ -58,6 +60,7 @@ def adjust_bag(request, item_id):
 
 
     request.session['bag'] = bag
+    sweetify.success(request, 'Quantity successfully adjusted', position='top-right', toast='true', icon='success', timer= '3000',)
     return redirect(reverse('view_bag'))
 
 
@@ -78,6 +81,7 @@ def remove_bag(request, item_id):
             bag.pop(item_id)
 
         request.session['bag'] = bag
+        sweetify.success(request, 'Product removed from bag', position='top-right', toast='true', icon='success', timer= '3000',)
         return HttpResponse(status=200)
 
     except Exception as e:

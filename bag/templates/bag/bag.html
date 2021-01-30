@@ -84,21 +84,21 @@
                                         </div>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                                 <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <p><span class="heading">Bag Total:</span>${{ total|floatformat:2 }}</p>
-                                    <p><span class="heading">Delivery:</span>${{ shipping|floatformat:2 }}</p>
-                                    <p><span class="heading">Grand Total:</span> ${{ grand_total|floatformat:2 }}</p>
+                                    <p><span class="heading">Bag Total:</span>€{{ total|floatformat:2 }}</p>
+                                    <p><span class="heading">Delivery:</span>€{{ shipping|floatformat:2 }}</p>
+                                    <p><span class="heading">Grand Total:</span> €{{ grand_total|floatformat:2 }}</p>
                                     {% if free_shipping_delta > 0 %}
                                         <p>
-                                            Spend ${{ free_shipping_delta }}  more for free delivery!
+                                            Spend €{{ free_shipping_delta }}  more for free delivery!
                                         </p>
                                     {% endif %}
                                 </td>

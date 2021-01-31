@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container">
+<div class="container">
     <div class="row">
         <div class="col">
             <hr>
@@ -10,41 +10,37 @@
             <hr>
         </div>
     </div>
-    
-    </div>
+
+</div>
 {% endblock %}
 
-
 {% block content %}
-    <div class="container">
-        <div>
-            <div class="spacer"></div>
-                    <p>Want to get in touch? Submit the form below and we will be in touch!</p>
-                    <p>Alternatively, you can stop by our studio.</p>
-                    <p><strong>We are open Mon-Sun 8am - 8pm.</strong></p>
-            <div class="spacer"></div>
-        </div>
-        <div class="row"> 
-            <div class="col">
-                <form action="{% url 'contact' %}" method="POST">
-                    {% csrf_token %}
-                    {{ contact_form|crispy }}
-                    <button class="cta">Update Details</button>
-                </form>
+<div class="container">
+    <div>
+        <div class="spacer"></div>
+        <p>Want to get in touch? Submit the form below and we will be in touch!</p>
+        <p>Alternatively, you can stop by our studio.</p>
+        <p><strong>We are open Mon-Sun 8am - 8pm.</strong></p>
+        <div class="spacer"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                {{ contact_form|crispy }}
+                <button class="cta">Update Details</button>
+            </form>
             <div class="spacer-lrg"></div>
-            </div>
         </div>
     </div>
+</div>
 
-  
-        <div class="row">
-            <div class="col">
-                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2383.828764347026!2d-6.26593548397951!3d53.31051288509553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670bffa9ebfa01%3A0xee3766769fb6402c!2s2%20St%20Kevin&#39;s%20Park%2C%20Dartry%2C%20Dublin%2C%20D06%20RD74!5e0!3m2!1sen!2sie!4v1610899053041!5m2!1sen!2sie" 
-                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
+<div class="row">
+    <div class="col">
+        <iframe id="map" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2383.828764347026!2d-6.26593548397951!3d53.31051288509553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670bffa9ebfa01%3A0xee3766769fb6402c!2s2%20St%20Kevin&#39;s%20Park%2C%20Dartry%2C%20Dublin%2C%20D06%20RD74!5e0!3m2!1sen!2sie!4v1610899053041!5m2!1sen!2sie" 
+        style="border:0;" aria-hidden="false" tabindex="0"></iframe>
     </div>
-        
-      
+</div>
 
 {% endblock %}

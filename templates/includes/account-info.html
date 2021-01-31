@@ -27,7 +27,7 @@
                                         <div><i class="fas fa-shopping-bag fa-lg  icon"></i></div>
                                         <p class="heading margin-top">
                                             {% if grand_total %}
-                                                ${{ grand_total|floatformat:2 }}
+                                                €{{ grand_total|floatformat:2 }}
                                             {% else %}
                                                 $0.00
                                             {% endif %}

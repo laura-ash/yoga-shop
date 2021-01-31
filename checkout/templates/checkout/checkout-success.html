@@ -2,26 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-    
+</div>
+
 {% endblock %}
 
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="heading">Thank you!</h2>
-                <hr>
-                <p>Please see your order information below. You will also receive confirmation via email.</p>
-            </div>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="heading">Thank you!</h2>
+            <hr>
+            <p>Please see your order information below. You will also receive confirmation via email.</p>
         </div>
+    </div>
 
     <div class="row">
         <div class="col">
@@ -35,107 +35,107 @@
     <table class="table-responsive">
         <tbody>
             <tr>
-            <th class="checkout-table" scope="row">Full Name</th>
-            <td>{{ order.full_name }}</td>
+                <th class="checkout-table" scope="row">Full Name</th>
+                <td>{{ order.full_name }}</td>
             </tr>
 
             <tr>
-            <th class="checkout-table" scope="row">Address</th>
-            <td>{{ order.street_address1 }}</td>
+                <th class="checkout-table" scope="row">Address</th>
+                <td>{{ order.street_address1 }}</td>
             </tr>
 
             {% if order.street_address2 %}
             <tr>
-            <th class="checkout-table" scope="row">Address 2</th>
-            <td>{{ order.street_address1 }}</td>
+                <th class="checkout-table" scope="row">Address 2</th>
+                <td>{{ order.street_address1 }}</td>
             </tr>
             {% endif %}
 
             {% if order.county %}
             <tr>
-            <th class="checkout-table" scope="row">County</th>
-            <td>{{ order.county }}</td>
+                <th class="checkout-table" scope="row">County</th>
+                <td>{{ order.county }}</td>
             </tr>
             {% endif %}
 
             <tr>
-            <th class="checkout-table" scope="row">Town or City</th>
-            <td>{{ order.town_or_city }}</td>
+                <th class="checkout-table" scope="row">Town or City</th>
+                <td>{{ order.town_or_city }}</td>
             </tr>
-            
+
             {% if order.postcode %}
             <tr>
-            <th class="checkout-table" scope="row">Postal Code</th>
-            <td>{{ order.postcode }}</td>
+                <th class="checkout-table" scope="row">Postal Code</th>
+                <td>{{ order.postcode }}</td>
             </tr>
             {% endif %}
 
             <tr>
-            <th class="checkout-table" scope="row">Country</th>
-            <td>{{ order.country }}</td>
+                <th class="checkout-table" scope="row">Country</th>
+                <td>{{ order.country }}</td>
             </tr>
 
             <tr>
-            <th class="checkout-table" scope="row">Phone Number</th>
-            <td>{{ order.phone_number }}</td>
+                <th class="checkout-table" scope="row">Phone Number</th>
+                <td>{{ order.phone_number }}</td>
             </tr>
         </tbody>
     </table>
 
-       <div class="row">
-            <div class="col">
-                <hr>
-                <p class="heading">Billing Info:</p>
-                <hr>
-            </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <p class="heading">Billing Info:</p>
+            <hr>
         </div>
+    </div>
 
     <table class="table-responsive">
         <tbody>
             <tr>
-            <th class="checkout-table" scope="row">Order Total</th>
-            <td>{{ order.order_total }}</td>
+                <th class="checkout-table" scope="row">Order Total</th>
+                <td>{{ order.order_total }}</td>
             </tr>
 
             <tr>
-            <th class="checkout-table" scope="row">Delivery</th>
-            {% if order.delivery_cost %}
+                <th class="checkout-table" scope="row">Delivery</th>
+                {% if order.delivery_cost %}
                 <td>{{ order.delivery_cost }}</td>
-            {% else %}
+                {% else %}
                 <td>Free</td>
-            {% endif %}
+                {% endif %}
             </tr>
 
             <tr>
-            <th class="checkout-table" scope="row">Grand Total</th>
-            <td>{{ order.grand_total }}</td>
+                <th class="checkout-table" scope="row">Grand Total</th>
+                <td>{{ order.grand_total }}</td>
             </tr>
 
-           </tbody>
+        </tbody>
     </table>
 
-        <div class="row">
-            <div class="col-12 col-md-4">
-                {% if from_profile %}
-                    <div class="spacer"></div>
-                    <a href="{% url 'profile' %}">
-                        <span class="cta"><i class="fas fa-angle-left"></i>  Back to Profile</span>
-                    </a>
-                {% else %}
-                     <div class="spacer"></div>
-                    <a href="{% url 'home' %}">
-                        <span class="cta"><i class="fas fa-angle-left"></i>  Back to main site</span>
-                    </a>
-                    <div class="spacer-lrg"></div>
-                {% endif %}
-            </div>
+    <div class="row">
+        <div class="col-12 col-md-4">
+            {% if from_profile %}
+            <div class="spacer"></div>
+            <a href="{% url 'profile' %}">
+                <span class="cta"><i class="fas fa-angle-left"></i> Back to Profile</span>
+            </a>
+            {% else %}
+            <div class="spacer"></div>
+            <a href="{% url 'home' %}">
+                <span class="cta"><i class="fas fa-angle-left"></i> Back to main site</span>
+            </a>
+            <div class="spacer-lrg"></div>
+            {% endif %}
         </div>
-        
+    </div>
+
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

@@ -288,37 +288,6 @@ a:hover {
     width: 100%;
 }
 
-/* Search bar */
-
-.search-input {
-    height: 3rem;
-    width: 0;
-    outline: none;
-    padding-left: 10px;
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 15px;
-    transition: all .2s;
-    z-index: -1;
-}
-
-.search-icon {
-    height: 3rem;
-    width: 3rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    font-size: 1.8em;
-    color: #fff;
-    cursor: pointer;
-}
-
-.active {
-    width: fit-content;
-}
-
-.icon-size {
-   width: 1.2rem;
-}
 
 /* Studio Page */
 

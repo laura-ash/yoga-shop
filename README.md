@@ -186,7 +186,7 @@ more categories if they were added or another business was using this website.
 
 ##### Events 
 - The events page shows all of the upcoming events in the studio.
-- These are also ordered by the ones closest to todays date. 
+- Superusers can also create events, update them and delete from this page.
 - Information on the date, facilitator and level of yoga recommended are included on each event card.
 
 ##### Studio 
@@ -206,6 +206,7 @@ more categories if they were added or another business was using this website.
 - It would also be great to add a blog comments section.
 - At the moment, you can update and create, update and delete events and contacts if you are a superuser. I would love to implement this for the blogs and products
 section too. These are currently managed in the Django admin. 
+- Within the events section, when you edit an event it's not possible to change the picture on the frontend. I'd like to build this in going forward.
 - When checking out, there is validation on the form when you go to add the "Country" value. The users need to add a country code here such as "GB". I would like to 
 update this in the future so they can type a country value instead such as "England". 
 

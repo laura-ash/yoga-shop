@@ -32,9 +32,8 @@ def create_event(request):
             return redirect('events')
         else:
             event_form = EventForm()
-            sweetify.success(request, 'Event creation unsuccessful.
-            Please ensure all fields are valid and try again',
-            position='top-right', toast='true', icon='error', timer='3000',)
+            sweetify.success(request, 'Event creation unsuccessful. Please ensure all fields are valid and try again',
+                position='top-right', toast='true', icon='error', timer='3000',)
             template = 'events/create-event.html'
 
     return render(request, 'events/create-event.html', context)
@@ -51,8 +50,7 @@ def update_event(request, pk):
         else:
             print('form not valid')
             print(event_form)
-            sweetify.success(request, 'Event update unsuccessful.
-            Please ensure all fields are valid and try again.',
+            sweetify.success(request, 'Event update unsuccessful. Please ensure all fields are valid and try again.',
             position='top-right', toast='true', icon='error', timer='3000',)
     return redirect(events)
 
@@ -64,7 +62,6 @@ def delete_event(request, pk):
         sweetify.success(request, 'Event deleted successfully.',
         position='top-right', toast='true', icon='success', timer='3000',)
     else:
-        sweetify.success(request, 'Event deletion unsuccessful. Please
-        try again.', position='top-right', toast='true', icon='error',
-        timer='3000',)
+        sweetify.success(request, 'Event deletion unsuccessful. Please try again.',
+        position='top-right', toast='true', icon='error', timer='3000',)
     return redirect(events)

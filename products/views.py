@@ -5,6 +5,7 @@ from .models import Product, Category
 
 # Create your views here.
 
+
 def products(request):
     """ View to show products """
 
@@ -12,7 +13,7 @@ def products(request):
     query = None
     categories = None
     sort = None
-    direction = None 
+    direction = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -32,7 +33,6 @@ def products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-
 
         if 'q' in request.GET:
             query = request.GET['q']

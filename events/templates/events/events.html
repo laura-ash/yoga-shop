@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 
@@ -31,7 +31,7 @@
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-4">
-            <img src="{{ event.image.url }}" class="card-img card-event" alt="{{ event.name }}">
+                <img src="{{ event.image.url }}" class="card-img card-event" alt="{{ event.name }}">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -48,60 +48,59 @@
             </div>
         </div>
 
-
-         <!-- Modal Update Event -->
-            <div class="modal fade" id="edit-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
+        <!-- Modal Update Event -->
+        <div class="modal fade" id="edit-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title heading" id="exampleModalLabel">Edit event details</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body"> 
+                    <div class="modal-body">
                         <form action="{% url 'update_event' event.id %}" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="name" value="{{ event.name }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="date" value="{{ event.date }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="slug" value="{{ event.slug }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="facilitator" value="{{ event.facilitator }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="level" value="{{ event.level }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="location" value="{{ event.location }}">
                             </div>
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <input type="text" class="form-control" name="description" value="{{ event.description }}">
                             </div>
                             <button type="button" class="cta" data-dismiss="modal">Close</button>
                             <button type="submit" class="cta">Update Event</button>
                         </form>
                     </div>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Modal Delete Event -->
-            <div class="modal fade" id="delete-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
+        <!-- Modal Delete Event -->
+        <div class="modal fade" id="delete-modal-{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title heading" id="exampleModalLabel">Delete event</h5>
+                        <h5 class="modal-title heading" id="exampleModalLabel2">Delete event</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body"> 
+                    <div class="modal-body">
                         <form action="{% url 'delete_event' event.id %}" method="POST">
                             {% csrf_token %}
                             <p>Are you sure you want to delete this event?</p>
@@ -109,19 +108,13 @@
                             <button type="submit" class="cta">Delete Event</button>
                         </form>
                     </div>
-                    </div>
                 </div>
             </div>
-            
+        </div>
+
     </div>
     {% endfor %}
-        <div class="spacer-lrg"></div>
-    </div>
-
-
-    
-
-
-
+    <div class="spacer-lrg"></div>
 </div>
+
 {% endblock %}

@@ -2,43 +2,39 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
-
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="heading">Our Space</h2>
-                <hr>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="heading">Our Space</h2>
+            <hr>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 margin-auto">
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 margin-auto">
             <img class="studio-img" src="{{ MEDIA_URL }}yoga-studio.jpg" alt="Yoga studio">
-            </div>
-            <div class="col-md-6 margin-auto">
-                <div class="spacer-lrg"></div>
-                <h1 class="heading">Our Studio</h1>
-                <p>We are lucky to have such a beautiful event space for us to hold!</p>
-                <p>Stop by any time to visit, we are located in the leafy area of Dartry, Dublin.</p>
-                <p>We always have different classes and events on, if you'd like more information click the below link!</p>
-                <div class="spacer"></div>
-                <div class="text-center">
-                    <a href="{% url 'events' %}" class="cta text-center">upcoming events</a>
-                </div>
+        </div>
+        <div class="col-md-6 margin-auto">
+            <div class="spacer-lrg"></div>
+            <h1 class="heading">Our Studio</h1>
+            <p>We are lucky to have such a beautiful event space for us to hold!</p>
+            <p>Stop by any time to visit, we are located in the leafy area of Dartry, Dublin.</p>
+            <p>We always have different classes and events on, if you'd like more information click the below link!</p>
+            <div class="spacer"></div>
+            <div class="text-center">
+                <a href="{% url 'events' %}" class="cta text-center">upcoming events</a>
             </div>
         </div>
-        <div class="spacer-lrg"></div>
-    </div>    
-    
+    </div>
+    <div class="spacer-lrg"></div>
+</div>
 
-
-   
 {% endblock %}

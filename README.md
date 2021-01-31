@@ -346,15 +346,16 @@ Steps:
 
 ### Validators
 
-HTML - All HTML files were tested through W3C Markup Validation Service. There were a number of errors as this tool does not recognize Jinja templating language. However, 
+HTML - All HTML files were tested through [W3C Markup Validation Service](https://validator.w3.org/). There were a number of errors as this tool does not recognize Jinja templating language. However, 
 outside of these errors it showed some HTML errors which were since fixed. 
 
-CSS - All the CSS files were tested through W3C CSS Validation Service. There were some errors for things the validator did not recognize, such as CSS variables. Outside 
+CSS - All the CSS files were tested through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator). There were some errors for things the validator did not recognize, such as CSS variables. Outside 
 of these, there were no errors to be addressed. 
 
-JavaScript - Generally I would use JSHint to validate any JavaScript files. However, for this project the JavaScript that was used was added mainly through Bootstrap 
+JavaScript - Generally I would use [JSHint](https://jshint.com/) to validate any JavaScript files. However, for this project the JavaScript that was used was added mainly through Bootstrap 
 and also Sweetify so there were no custom JavaScript files to check. 
 
+Python - All python files were checked with this [PEP8](http://pep8online.com/) online validator. Changes were made to be compliant here where possible.
 
 
 

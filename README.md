@@ -33,6 +33,7 @@ build out the functionality in this website which is discussed below. It was a r
 
 5. [**Testing**](#testing)
     - [** Manual Testing **](#manual-testing)
+    - [** Validators **](#validators)
     - [**Bugs**](#bugs)
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
@@ -342,6 +343,21 @@ User stories:
 
 Steps: 
 - In order to test this, I conducted different searches using the search bar. I then checked against the search keywords and the search results that everything was behaving as expected.
+
+### Validators
+
+HTML - All HTML files were tested through W3C Markup Validation Service. There were a number of errors as this tool does not recognize Jinja templating language. However, 
+outside of these errors it showed some HTML errors which were since fixed. 
+
+CSS - All the CSS files were tested through W3C CSS Validation Service. There were some errors for things the validator did not recognize, such as CSS variables. Outside 
+of these, there were no errors to be addressed. 
+
+JavaScript - Generally I would use JSHint to validate any JavaScript files. However, for this project the JavaScript that was used was added mainly through Bootstrap 
+and also Sweetify so there were no custom JavaScript files to check. 
+
+
+
+
 
 ### Bugs
 

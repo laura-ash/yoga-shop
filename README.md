@@ -201,9 +201,13 @@ more categories if they were added or another business was using this website.
 
 
 
-### Features to Implement in the Future
+### Features Left to Implement 
 - Going forward I would love to offer the ability to actually book events through the form.
 - It would also be great to add a blog comments section.
+- At the moment, you can update and create, update and delete events and contacts if you are a superuser. I would love to implement this for the blogs and products
+section too. These are currently managed in the Django admin. 
+- When checking out, there is validation on the form when you go to add the "Country" value. The users need to add a country code here such as "GB". I would like to 
+update this in the future so they can type a country value instead such as "England". 
 
 ---
 ## Information Architecture

@@ -14,7 +14,6 @@
 
     <div class="jumbotron hero d-flex flex-column justify-content-center">
     </div>
-    
 
     <section>
         <div class="container">
@@ -37,7 +36,7 @@
                         <div class="spacer"></div>
                         <a class="cta" href="{% url 'products' %}?category=accessories,clothing">Shop now</a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -45,28 +44,28 @@
 
     <section>
         <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-                <img class="img-fluid rounded-circle" src="{{ MEDIA_URL }}studio-pose.png" alt="">
-            </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-                <h2 class="heading-lrg display-4">Our Space</h2>
-                <div class="d-flex">
-                    <span class="dot text-center"></span>
-                    <span class="dot text-center"></span>
-                    <span class="dot text-center"></span>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid rounded-circle" src="{{ MEDIA_URL }}studio-pose.png" alt="">
+                    </div>
                 </div>
-                <div class="spacer"></div>
-                <p>Come practice with us! Take some time to see our beautiful space.</p>
-                <div class="spacer"></div>
-                <a class="cta" href="{% url 'event_space' %}">Find out more</a>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="heading-lrg display-4">Our Space</h2>
+                        <div class="d-flex">
+                            <span class="dot text-center"></span>
+                            <span class="dot text-center"></span>
+                            <span class="dot text-center"></span>
+                        </div>
+                        <div class="spacer"></div>
+                        <p>Come practice with us! Take some time to see our beautiful space.</p>
+                        <div class="spacer"></div>
+                        <a class="cta" href="{% url 'event_space' %}">Find out more</a>
+                    </div>
+
+                </div>
             </div>
-            
-            </div>
-        </div>
         </div>
         <div class="spacer"></div>
     </section>
@@ -81,7 +80,7 @@
                 <span class="dot text-center"></span>
             </div>
         </div>
-        
+
         <div class="row posts d-flex justify-content-center">
             {% for post in posts %}
             <div class="card card-home">
@@ -92,12 +91,12 @@
                     <p class="card-text">{{ post.intro }}</p>
                     <a href="{% url 'detail' slug=post.slug %}" class="cta">Read More</a>
                 </div>
-            </div>  
+            </div>
             {% endfor %}
         </div>
         <div class="spacer-lrg"></div>
     </section>
 
 </div>
-        
+
 {% endblock %}

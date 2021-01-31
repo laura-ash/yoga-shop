@@ -395,12 +395,16 @@ a:hover {
     display: inline-block;
     color: var(--primary-color);
 }
+
+/* Credits to Sazzad on codepen */
+
 .footer-social-links a i,
 .footer-social-links a span{
     position: relative;
     top: 2px;
     left: 1px; 
 }
+
 .footer-social-links a:before{
     content: "";
     display: inline-block;
